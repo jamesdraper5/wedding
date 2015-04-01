@@ -1,0 +1,108 @@
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/Bebas.ttf') format('truetype');
+}
+
+.script {
+	font-family: 'Dancing Script', cursive;
+	color: @gray-lighter;
+}
+
+.pressed {
+	/*
+	font-family: 'Open Sans', sans-serif;
+	
+	font-family: 'Exo', sans-serif;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Bowlby One', cursive;
+	font-family: 'Passion One', cursive;
+	font-weight: 700;
+	*/
+
+	font-family: 'Bebas', sans-serif;
+	letter-spacing: 0.125em;
+
+	
+	
+
+}
+.x-large {
+	font-size: 200%;
+}
+
+.transparent {
+	background-color: transparent;
+}
+.light {
+	color: @gray-lightest;
+}
+
+body {
+	position: relative;
+	padding-top: 40px;
+}
+.jumbotron>hr {
+	border-top-color: @gray-lightest;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+#main-jumbotron {
+	//border-bottom: 1px solid #dfdfdf;
+	border-radius: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#main-jumbotron>h2 {
+	margin-top: 50px;
+}
+#main-nav {
+	background-color: @body-bg;
+	z-index: 100;
+}
+.main-section {
+	padding-top: 40px;
+}
+
+.ribbon {
+	margin: 20px 0;
+	line-height: 34px;
+	position: relative;
+	user-select: none;
+	background-color: @brand-primary;
+	color: #fff;
+	text-shadow: 0px -1px 1px @gray-light;
+	text-transform: uppercase;
+	font-size: 20px;
+	&:before, &:after {
+	  content: '';
+	  position: absolute;
+	  height: 0;
+	  width: 0;
+	  border-style: solid;
+	  border-width: 0;
+	}
+    &:before {
+      border-color: @brand-primary transparent;
+      left: -17px;
+      border-width: 17px 0 17px 17px;
+      color:red;
+    }
+    &:after {
+      border-color: @brand-primary transparent ;
+      right: -17px;
+      border-width: 17px 17px 17px 0;
+    }
+}
+
+#map-canvas {
+	height: 200px;
+	border: 5px solid #fff;
+}
+#logo-center {
+	margin: 0 auto;
+}
+
+
+
+
+

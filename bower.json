@@ -1,0 +1,28 @@
+{
+  "name": "wedding",
+  "version": "0.0.0",
+  "authors": [
+    "James Draper <jamesdrape@gmail.com>"
+  ],
+  "description": "bla",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "bla"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/third-party",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
