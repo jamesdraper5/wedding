@@ -5,34 +5,66 @@ var mainBowerFiles = require('main-bower-files');
 
 var coffeelint = require('gulp-coffeelint');
 
-
-
-
 var coffee = require('gulp-coffee');
 var gutil = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
-
-
-
-
-
-
-
+var chalk = require('chalk');
 
 var less = require('gulp-less');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var minifyCSS = require('gulp-minify-css');
 
+var $ = require('gulp-load-plugins')()
+
+
+// Config
+var bases = {
+    dist: './dist/',
+    src: './src/',
+    docs: './docs/'
+};
+
+bases.bower = bases.src + 'libs/bower/';
+bases.css = bases.src + 'css/';
+bases.app = bases.src + 'app/';
+
+var paths = {
+    images: ['images/**/*.png']
+};
+    
+
+
+gulp.task('coffee', function () {
+    return gulp.src(bases.app + '**/*.coffee', {base: bases.app})
+        .pipe($.changed(bases.app, { extension: '.js' }))
+        .pipe($.plumber({
+            errorHandler: console.log
+        }))
+        .pipe($.coffeelint('./node_modules/teamwork-coffeelint-rules/coffeelint.json'))
+        .pipe($.coffeelint.reporter())
+        .pipe($.coffeelintThreshold(10, 0, function(numberOfWarnings, numberOfErrors) {
+            $.util.beep()
+            console.error( chalk.bgRed(chalk.black("ERROR:")) + chalk.red(" CoffeeScript compilation failure") + " due to $.coffeeLint violations; see above. Warning count: " + chalk.blue(numberOfWarnings) + ". Error count: " + chalk.red(numberOfErrors) + ".");
+        }))
+        .pipe($.coffee({
+            bare: true
+        }))
+        .pipe(gulp.dest(bases.app))
+        /*
+        */
+});
+
 // Static Server + watching scss/html files
 gulp.task('serve', ['less'], function() {
 
     browserSync({
-        server: "./app"
+        server: "./"
     });
 
     gulp.watch("app/less/*.less", ['less']);
-    gulp.watch("app/*.html").on('change', reload);
+    gulp.watch("/*.html").on('change', reload);
+    gulp.watch(bases.app + '**/*.coffee', ['coffee']);
 });
 
 
@@ -128,6 +160,7 @@ gulp.task('lint', function () {
 
 
 
+/*
 gulp.task('coffee', function() {
 
     gulp.src('./src/*.coffee')
@@ -136,6 +169,7 @@ gulp.task('coffee', function() {
       .pipe(sourcemaps.write('./maps'))
       .pipe(gulp.dest('./public/js'));
 });
+*/
 
 
 

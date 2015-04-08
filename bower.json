@@ -23,6 +23,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "requirejs": "~2.1.17",
+    "knockout": "~3.3.0",
+    "text": "~2.0.14",
+    "moment": "~2.10.0"
   }
 }
