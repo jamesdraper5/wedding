@@ -23,9 +23,11 @@ define(['knockout', 'moment'], function (ko, moment) {
     	// Global App Pub/Sub notifier
 	    this.notifier = new ko.subscribable();
 
-	    this.weddingDate = moment("2015-08-27")
-	    this.weddingDateString = this.weddingDate.format("MMMM Do YYYY")
-	    this.timeToWedding = this.weddingDate.from(moment(), true) // This returns a relevant string depending on the length of time, e.g. "2 days" or "4 months"
+	    this.weddingDate = moment("2015-08-27");
+	    this.weddingDateString = this.weddingDate.format("MMMM Do YYYY");
+	    this.timeToWedding = this.weddingDate.from(moment(), true); // This returns a relevant string depending on the length of time, e.g. "2 days" or "4 months"
+
+        this.apiUrl = "http://api.wedding.local";
 
 	    this.Init();
     }
