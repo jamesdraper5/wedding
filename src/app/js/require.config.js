@@ -18,7 +18,7 @@ var require = {
         'knockout':                  'src/libs/bower/knockout/dist/knockout',
         'ladda':                     'src/libs/bower/ladda/dist/ladda.min',
         'moment':                    'src/libs/bower/moment/min/moment.min',
-        'spin':                      'src/libs/bower/Ladda/dist/spin.min', // needed by Ladda
+        'spin':                      'src/libs/bower/ladda/dist/spin.min', // needed by Ladda
         'text':                      'src/libs/bower/text/text'
         //'config-components':         'app/config/components'
 
