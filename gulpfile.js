@@ -70,13 +70,13 @@ gulp.task('serve', ['less'], function() {
 
 // Compile Less into CSS & auto-inject into browsers
 gulp.task('less', function () {
-    return gulp.src('app/less/main.less')
+    return gulp.src('src/less/main.less')
         .pipe(less()
             .on('error', gutil.log)
             .on('error', gutil.beep)
         )
-        .pipe(minifyCSS({keepSpecialComments: 1}))
-        .pipe(gulp.dest('app/css/'))
+        //.pipe(minifyCSS({keepSpecialComments: 1}))
+        .pipe(gulp.dest('src/css/'))
         .pipe(reload({stream: true}));
 });
 

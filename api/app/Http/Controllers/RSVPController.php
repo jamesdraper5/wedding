@@ -59,7 +59,7 @@ class RSVPController extends Controller {
 
 			return response()->json([
 	    		'status' => 'error'
-	    	]);
+	    	], 500);
 
 	    }
 	}

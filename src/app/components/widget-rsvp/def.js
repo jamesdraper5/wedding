@@ -8,6 +8,7 @@ define(["knockout", "text!./template.html", "moment"], function(ko, templateMark
     this.phoneNumber = ko.observable("123123");
     this.attendees = ko.observable("Jim");
     this.extraInfo = ko.observable("");
+    this.isSubmitting = ko.observable(false);
   };
   VM.prototype.submitForm = function() {
     var rsvpData;
@@ -18,7 +19,7 @@ define(["knockout", "text!./template.html", "moment"], function(ko, templateMark
       attendees: this.attendees(),
       extraInfo: this.extraInfo()
     };
-    console.log('rsvpData', rsvpData);
+    this.isSubmitting(true);
     $.ajax({
       url: app.apiUrl + "/rsvp",
       method: "POST",
@@ -33,13 +34,22 @@ define(["knockout", "text!./template.html", "moment"], function(ko, templateMark
           _this.phoneNumber("");
           _this.attendees("");
           _this.extraInfo("");
-          alert('Thanks for your RSVP!');
+          _this.isSubmitting(false);
+          app.showAlert({
+            alertMessage: "<strong>Thanks!</strong> We're looking forward to seeing you!",
+            alertType: 'success'
+          });
           return $("#rsvp").slideUp(400);
         };
       })(this),
       error: (function(_this) {
         return function(xhr) {
-          return console.log('xhr', xhr);
+          console.log('xhr', xhr);
+          _this.isSubmitting(false);
+          return app.showAlert({
+            alertMessage: "<strong>Oh no, There's been a problem sending your RSVP :( </strong> <br> Would you mind <a class='alert-link' href='mailto:rsvp@lucyandjameswedding.com'>emailing us</a> instead while we get this fixed. Thanks.",
+            alertType: 'danger'
+          });
         };
       })(this)
     });

@@ -13,6 +13,7 @@ define [
         @phoneNumber = ko.observable "123123"
         @attendees = ko.observable "Jim"
         @extraInfo = ko.observable ""
+        @isSubmitting = ko.observable false
         return
 
     VM::submitForm = () ->
@@ -24,9 +25,7 @@ define [
             extraInfo: @extraInfo()
         }
 
-
-        console.log 'rsvpData', rsvpData
-
+        @isSubmitting true
 
         $.ajax
             url: app.apiUrl + "/rsvp"
@@ -41,10 +40,25 @@ define [
                 @phoneNumber ""
                 @attendees ""
                 @extraInfo ""
-                alert 'Thanks for your RSVP!'
+                @isSubmitting false
+
+                app.showAlert({
+                    alertMessage: "<strong>Thanks!</strong> We're looking forward to seeing you!",
+                    alertType: 'success'
+                })
+
                 $("#rsvp").slideUp(400)
+
+
+
             error: (xhr) =>
                 console.log 'xhr', xhr
+                @isSubmitting false
+
+                app.showAlert({
+                    alertMessage: "<strong>Oh no, There's been a problem sending your RSVP :( </strong> <br> Would you mind <a class='alert-link' href='mailto:rsvp@lucyandjameswedding.com'>emailing us</a> instead while we get this fixed. Thanks.",
+                    alertType: 'danger'
+                })
 
         return
 

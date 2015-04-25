@@ -6,7 +6,7 @@
 		</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="src/css/main.css">
+		<link rel="stylesheet" href="src/css/main.css?v=2">
 	</head>
 	<body class="container" data-spy="scroll" data-target="#main-nav">
 		<header>
@@ -33,6 +33,13 @@
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
+
+			<!-- ko if: app.isAlertVisible() -->
+			<div id="app-alert" class="alert" role="alert" data-bind="css: app.getAlertClasses()">
+			  <button type="button" class="close" aria-label="Close" data-bind="click: function(){app.hideAlert()}"><span aria-hidden="true">&times;</span></button>
+			  <span data-bind="html: app.alertMessage()"></span>
+			</div>
+			<!-- /ko -->
 
 			<div id="main-jumbotron" class="jumbotron text-center transparent">
 				<h1 id="main-header" class="row">
