@@ -44,8 +44,9 @@ class RSVPController extends Controller {
 		            'extraInfo' => Request::input('extraInfo'),
 		        ), function($message)
 		    {
-		        $message->from('rsvp@lucyandjameswedding.com');
-		        $message->to('jamesdrape@gmail.com', 'Admin')->subject('Wedding RSVP');
+		        $message->from(Request::input('emailAddress'), Request::input('name'));
+		        $message->to('jamesdrape@gmail.com')->cc('murphylucy1@yahoo.ie');
+		        $message->subject('Wedding RSVP');
 		    })
 		) {
 

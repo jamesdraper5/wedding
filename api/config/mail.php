@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'james@test.com', 'name' => 'Wedding Website'],
+	'from' => ['address' => 'jamesdrape@gmail.com', 'name' => 'Wedding Website'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -119,6 +119,6 @@ return [
 	|
 	*/
 
-	'pretend' => true,
+	'pretend' => false,
 
 ];
