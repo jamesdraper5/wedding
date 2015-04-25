@@ -47,7 +47,7 @@ define(["knockout", "text!./template.html", "moment"], function(ko, templateMark
           console.log('xhr', xhr);
           _this.isSubmitting(false);
           return app.showAlert({
-            alertMessage: "<strong>Oh no, There's been a problem sending your RSVP :( </strong> <br> Would you mind <a class='alert-link' href='mailto:rsvp@lucyandjameswedding.com'>emailing us</a> instead while we get this fixed. Thanks.",
+            alertMessage: "<strong>Oh no, There's been a problem sending your RSVP :( </strong> <br> Would you mind <a class='alert-link' href='mailto:rsvp@lucyandjameswedding.com'>emailing us</a> instead while we get this fixed? Thanks.",
             alertType: 'danger'
           });
         };

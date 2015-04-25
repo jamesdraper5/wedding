@@ -1,4 +1,4 @@
-define(['knockout', 'moment'], function (ko, moment) {
+define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
 
     var components = [
     	'widget-map',
@@ -79,7 +79,7 @@ define(['knockout', 'moment'], function (ko, moment) {
     };
     
     App.prototype.hideAlert = function(data, event) {
-        
+
         console.log( 'this: ', this );
 
         this.alertMessage('')
