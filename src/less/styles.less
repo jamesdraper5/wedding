@@ -85,7 +85,6 @@ body {
       border-color: @brand-primary transparent;
       left: -17px;
       border-width: 17px 0 17px 17px;
-      color:red;
     }
     &:after {
       border-color: @brand-primary transparent ;
@@ -94,7 +93,7 @@ body {
     }
 }
 
-#map-canvas {
+#church-map {
 	height: 200px;
 	border: 5px solid #fff;
 }
@@ -114,6 +113,20 @@ footer.row > .center-block {
 	}
 }
 
+// Print Styles
+@media print {
+	
+	a[href]:after {
+		content: '';
+	}
+	
+	.ribbon {
+		&:before, &:after {
+			border: 0 none;
+		}
+  	}
+
+}
 
 
 

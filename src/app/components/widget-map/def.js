@@ -68,7 +68,7 @@ define(["knockout", "text!./template.html"], function(ko, templateMarkup) {
       styles: styles
     };
     pinImage = './src/app/images/heart.png';
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    map = new google.maps.Map(document.getElementById('church-map'), mapOptions);
     request = {
       placeId: 'ChIJKzWG0XpsRUgRKZOlTPkYXm0'
     };
@@ -102,6 +102,9 @@ define(["knockout", "text!./template.html"], function(ko, templateMarkup) {
     script.type = 'text/javascript';
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC3fIS-jYA5Vpe0NxeWWKbAnV4213ffh5g&libraries=places&callback=app.notifyMapLoaded';
     document.body.appendChild(script);
+  };
+  VM.prototype.printMap = function() {
+    return window.print();
   };
   return {
     viewModel: VM,

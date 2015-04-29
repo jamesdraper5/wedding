@@ -1,48 +1,53 @@
-<p class="text-center">If you haven't RSVP'd yet, you can do so by filling out the form below:</p>
-<hr>
+<section id="rsvp" class="main-section row hidden-print">
+	<h1 class="ribbon text-center">RSVP</h1>
 
-<form class="form-horizontal" id="rsvp-form" data-bind="submit:submitForm">
-  	<div class="form-group">
-	    <label for="name" class="col-sm-2 control-label">Name</label>
-	    <div class="col-sm-10">
-	      	<input type="text" class="form-control" id="name" name="name" placeholder="Your name" data-bind="value: name" required>
-	    </div>
-  	</div>
+	<p class="text-center">If you haven't RSVP'd yet, you can do so by filling out the form below:</p>
+	<hr>
 
-  	 <div class="form-group">
-	    <label for="email-address" class="col-sm-2 control-label">Email</label>
-	    <div class="col-sm-10">
-	      	<input type="email" class="form-control" id="email-address" name="email-address" placeholder="Your email address" data-bind="value: emailAddress" required>
-	    </div>
-  	</div>
-	
-	<div class="form-group">
-		<label for="phone" class="col-sm-2 control-label">Phone</label>
-		<div class="col-sm-10">
-			<input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number (optional)" data-bind="value: phoneNumber">
+	<form class="form-horizontal" id="rsvp-form" data-bind="submit:submitForm">
+	  	<div class="form-group">
+		    <label for="name" class="col-sm-2 control-label">Name</label>
+		    <div class="col-sm-10">
+		      	<input type="text" class="form-control" id="name" name="name" placeholder="Your name" data-bind="value: name" required>
+		    </div>
+	  	</div>
+
+	  	 <div class="form-group">
+		    <label for="email-address" class="col-sm-2 control-label">Email</label>
+		    <div class="col-sm-10">
+		      	<input type="email" class="form-control" id="email-address" name="email-address" placeholder="Your email address" data-bind="value: emailAddress" required>
+		    </div>
+	  	</div>
+		
+		<div class="form-group">
+			<label for="phone" class="col-sm-2 control-label">Phone</label>
+			<div class="col-sm-10">
+				<input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number (optional)" data-bind="value: phoneNumber">
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-		<label for="attendees" class="col-sm-2 control-label">Attendees</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" id="attendees" name="attendees" placeholder="Names of the people attending" data-bind="value: attendees" required>
+		<div class="form-group">
+			<label for="attendees" class="col-sm-2 control-label">Attendees</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="attendees" name="attendees" placeholder="Names of the people attending" data-bind="value: attendees" required>
+			</div>
 		</div>
-	</div>
 
-	<div class="form-group">
-	    <label for="extra-info" class="col-sm-2 control-label">Extra info</label>
-	    <div class="col-sm-10">
-			<textarea class="form-control" id="extra-info" rows="3" name="extra-info" placeholder="Need to tell us anything else?" data-bind="value: extraInfo"></textarea>
+		<div class="form-group">
+		    <label for="extra-info" class="col-sm-2 control-label">Extra info</label>
+		    <div class="col-sm-10">
+				<textarea class="form-control" id="extra-info" rows="3" name="extra-info" placeholder="Need to tell us anything else?" data-bind="value: extraInfo"></textarea>
+			</div>
 		</div>
-	</div>
 
-  	<div class="form-group">
-    	<div class="col-sm-offset-2 col-sm-10">
-      		<button type="submit" class="ladda-button btn btn-primary" data-bind="ladda: isSubmitting" data-style="expand-right">
-      			<span class="ladda-label" data-bind="text:(isSubmitting()?'Sending...':'Send')">Send</span>
-      		</button>
-    	</div>
-  	</div>
-	
-</form>
+	  	<div class="form-group">
+	    	<div class="col-sm-offset-2 col-sm-10">
+	      		<button type="submit" class="ladda-button btn btn-primary" data-bind="ladda: isSubmitting" data-style="expand-right">
+	      			<span class="ladda-label" data-bind="text:(isSubmitting()?'Sending...':'Send')">Send</span>
+	      		</button>
+	    	</div>
+	  	</div>
+		
+	</form>
+
+</section>

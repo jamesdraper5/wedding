@@ -6625,14 +6625,13 @@ body {
   border-color: #d1bbc7 transparent;
   left: -17px;
   border-width: 17px 0 17px 17px;
-  color: red;
 }
 .ribbon:after {
   border-color: #d1bbc7 transparent;
   right: -17px;
   border-width: 17px 17px 17px 0;
 }
-#map-canvas {
+#church-map {
   height: 200px;
   border: 5px solid #fff;
 }
@@ -6649,4 +6648,13 @@ footer.row > .center-block {
 }
 #app-alert.shown {
   display: block;
+}
+@media print {
+  a[href]:after {
+    content: '';
+  }
+  .ribbon:before,
+  .ribbon:after {
+    border: 0 none;
+  }
 }

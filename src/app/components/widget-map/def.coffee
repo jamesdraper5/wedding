@@ -65,7 +65,7 @@ define [
 
         pinImage = './src/app/images/heart.png'
 
-        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
+        map = new google.maps.Map(document.getElementById('church-map'), mapOptions)
 
         request = {
             placeId: 'ChIJKzWG0XpsRUgRKZOlTPkYXm0'
@@ -109,9 +109,9 @@ define [
         document.body.appendChild script
         return
 
+    VM::printMap = () ->
 
-
-
+        window.print()
 
 
     return {
