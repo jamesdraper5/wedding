@@ -1,0 +1,1584 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"noti",
+				"notifyFacebookEvent"
+			],
+			[
+				"init",
+				"initializeFacebokk"
+			],
+			[
+				"event",
+				"eventData	*stripe.EventData ν"
+			],
+			[
+				"installationI",
+				"installationInfo"
+			],
+			[
+				"V",
+				"CountryVATPercent"
+			],
+			[
+				"newCa",
+				"newCardLastFour"
+			],
+			[
+				"installationDeskD",
+				"installationDeskDateLastPayment"
+			],
+			[
+				"curre",
+				"currentPayPeriod"
+			],
+			[
+				"LOCAL",
+				"LOCAL"
+			],
+			[
+				"structk",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"RE",
+				"REQUEST"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tag",
+				"tagsinput"
+			],
+			[
+				"_up",
+				"_updateHintPosition"
+			],
+			[
+				"off",
+				"offsetPixels"
+			],
+			[
+				"getH",
+				"getHintOffset"
+			],
+			[
+				"current",
+				"currentWord"
+			],
+			[
+				"care",
+				"caretOffset"
+			],
+			[
+				"quer",
+				"queryString"
+			],
+			[
+				"it",
+				"itemsArray"
+			],
+			[
+				"cha",
+				"charAt"
+			],
+			[
+				"te",
+				"textString"
+			],
+			[
+				"text",
+				"textLength"
+			],
+			[
+				"geti",
+				"getInputValue"
+			],
+			[
+				"inputv",
+				"inputVal"
+			],
+			[
+				"enter",
+				"enterKeyed"
+			],
+			[
+				"_ma",
+				"_manageAutoTag"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Searching 3688 files for \"RSVPController\"\n\n0 matches across 0 files\n\n\nSearching 5534 files for \"RSVPController\"\n\n/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.html:\n    6  use Facebook\\FacebookRedirectLoginHelper;\n    7  \n    8: class RSVPController extends Controller {\n    9  \n   10  	/*\n\n/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php:\n    4  use Mail;\n    5  \n    6: class RSVPController extends Controller {\n    7  \n    8  	/*\n\n/Users/james/Sites/wedding/api/app/Http/routes.php:\n   16  Route::get('photos', 'PhotosController@getTaggedPhotos');\n   17  \n   18: Route::post('rsvp', 'RSVPController@sendResponse');\n   19  \n   20  Route::get('/', 'WelcomeController@index');\n\n/Users/james/Sites/wedding/api/vendor/composer/autoload_classmap.php:\n   16      'App\\\\Http\\\\Controllers\\\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',\n   17      'App\\\\Http\\\\Controllers\\\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',\n   18:     'App\\\\Http\\\\Controllers\\\\RSVPController' => $baseDir . '/app/Http/Controllers/RSVPController.php',\n   19      'App\\\\Http\\\\Controllers\\\\WelcomeController' => $baseDir . '/app/Http/Controllers/WelcomeController.php',\n   20      'App\\\\Http\\\\Kernel' => $baseDir . '/app/Http/Kernel.php',\n\n/Users/james/Sites/wedding/api2/app/Http/Controllers/RSVPController.php:\n    4  use Mail;\n    5  \n    6: class RSVPController extends Controller {\n    7  \n    8  	/*\n\n/Users/james/Sites/wedding/api2/app/Http/routes.php:\n   12  */\n   13  \n   14: Route::post('rsvp', 'RSVPController@sendResponse');\n   15  \n   16  Route::get('/', 'WelcomeController@index');\n\n/Users/james/Sites/wedding/wedding.sublime-workspace:\n  171  		\"/Users/james/Sites/wedding/index.html\",\n  172  		\"/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.html\",\n  173: 		\"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php\",\n  174  		\"/Users/james/Sites/wedding/api/app/Http/routes.php\",\n  175  		\"/private/etc/apache2/extra/httpd-vhosts.conf\",\n\n8 matches across 7 files\n\n\nSearching 5699 files for \"widget-photos\"\n\n/Users/james/Sites/wedding/index.html:\n   76  		<!-- /ko -->\n   77  		\n   78: 		<widget-photos-admin></widget-photos-admin>\n   79  		\n   80  		<h1>LOUD NOISES</h1>\n   81  \n   82: 		<widget-photos></widget-photos>\n   83  \n   84  		\n\n/Users/james/Sites/wedding/src/app/js/app.js:\n    3      var components = [\n    4      	'widget-map',\n    5:     	'widget-photos',\n    6      	'widget-rsvp'\n    7      ];\n\n/Users/james/Sites/wedding/wedding.sublime-workspace:\n  131  		},\n  132  		{\n  133: 			\"file\": \"src/app/components/widget-photos/template.html\",\n  134  			\"settings\":\n  135  			{\n  ...\n  139  		},\n  140  		{\n  141: 			\"file\": \"src/app/components/widget-photos/def.coffee\",\n  142  			\"settings\":\n  143  			{\n  ...\n  690  				{\n  691  					\"buffer\": 2,\n  692: 					\"file\": \"src/app/components/widget-photos/template.html\",\n  693  					\"settings\":\n  694  					{\n  ...\n  717  				{\n  718  					\"buffer\": 3,\n  719: 					\"file\": \"src/app/components/widget-photos/def.coffee\",\n  720  					\"settings\":\n  721  					{\n  ...\n  981  			[\n  982  				\"photosdef\",\n  983: 				\"src/app/components/widget-photos/def.coffee\"\n  984  			],\n  985  			[\n  986  				\"template\",\n  987: 				\"src/app/components/widget-photos/template.html\"\n  988  			],\n  989  			[\n\n11 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 3393,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/app/components/widget-photos/template.html",
+			"settings":
+			{
+				"buffer_size": 885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/widget-photos/def.coffee",
+			"settings":
+			{
+				"buffer_size": 839,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/app/Http/Controllers/RSVPController.php",
+			"settings":
+			{
+				"buffer_size": 1569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php namespace App\\Http\\Controllers;\n\nsession_start();\n//require 'vendor/autoload.php';\n\nuse Debugbar;\nuse Log;\nuse Mail;\nuse Request;\n\nuse Facebook\\FacebookSession;\nuse Facebook\\FacebookRedirectLoginHelper;\nuse Facebook\\FacebookRequest;\nuse Facebook\\Entities\\AccessToken;\n\nclass PhotosController extends Controller {\n\n	/*\n	|--------------------------------------------------------------------------\n	| Welcome Controller\n	|--------------------------------------------------------------------------\n	|\n	| This controller renders the \"marketing page\" for the application and\n	| is configured to only allow guests. Like most of the other sample\n	| controllers, you are free to modify or remove it as you desire.\n	|\n	*/\n\n	/**\n	 * Create a new controller instance.\n	 *\n	 * @return void\n	 */\n	public function __construct()\n	{\n		FacebookSession::setDefaultApplication('376809592527964', 'd762956112187c3eba3981287e6ead01');\n	}\n\n\n	/**\n	 * Show the application welcome screen to the user.\n	 *\n	 * @return Response\n	 */\n	public function getFacebookLoginUrl()\n	{	\n		\n		$helper = new FacebookRedirectLoginHelper('http://wedding.local/api/public/photos');\n		$loginUrl = $helper->getLoginUrl();\n\n		return response()->json([\n    		'status' => 'okay',\n    		'url' => $loginUrl\n    	]);\n\n	}\n\n\n	/**\n	 * Show the application welcome screen to the user.\n	 *\n	 * @return Response\n	 */\n	public function getTaggedPhotos()\n	{	\n\n\n		$accessToken = new AccessToken(\"CAAFWtNHpHFwBACtLfFeQUamYpQZAFmr8ZAyU095BPHBJ5CVQKZCzfJCCNuYWzoMA1C9ptjGiwhhLH66kZCaRuvHZBrZA9dvnPMLD4384lwzxB9ZA2P30rOhXWqEPL0YeaAyr3WAD2gLe58F2okpoKgFKyGBQW7i0G3d9bRzFNfuk9JJuTNJMjcA4ZBZBUhEJVB2MNdcNR1P8A4jKbx73QSXnA\");\n		Log::info('$accessToken: ' . $accessToken);\n		Log::info('$accessToken: ' . gettype($accessToken));\n\n\n		$longLivedAccessToken = $accessToken->extend();\n		Log::info('$longLivedAccessToken: ' . $longLivedAccessToken);\n\n\n		//$longLivedAccessToken = new AccessToken('CAAFTv0433EIBAIgyLvqsO1umeiKy0Qq1y85Nb9vZCXFJbsk5dhkxZB5YXGGq8mshW7IDmoHGR5fOX18XXuM3LeZBktSxjt4qdgXe0zN2q6kg3jCZAmZAKxXEMnY6JWEl6zw2OuA3Fdc35dFUsZArODTUeNlsLTaSfKx1OKY5xwhnMZCZAWF4TZA6z');\n\n		try {\n		  // Get a code from a long-lived access token\n		  $code = AccessToken::getCodeFromAccessToken($longLivedAccessToken);\n		} catch(FacebookSDKException $e) {\n		  Log::info('Error getting code: ' . $e->getMessage());\n		  exit;\n		}\n\n		try {\n		  // Get a new long-lived access token from the code\n		  $newLongLivedAccessToken = AccessToken::getAccessTokenFromCode($code);\n		} catch(FacebookSDKException $e) {\n		  Log::info('Error getting a new long-lived access token: ' . $e->getMessage());\n		  exit;\n		}\n\n		$accessTokenInfo = $newLongLivedAccessToken->getInfo();\n		Debugbar::info($accessTokenInfo);\n\n		// Make calls to Graph using $shortLivedAccessToken\n		$session = new FacebookSession($newLongLivedAccessToken);\n\n		$request = new FacebookRequest(\n			$session, \n			'GET', \n			'/me/photos'\n		);\n		$userData = $request->execute()\n		  	->getGraphObject()\n		  	->asArray();\n\n		Debugbar::info($userData);\n\n		$photos = [];\n		$userPics = $userData[\"data\"];\n\n		Debugbar::info($userPics);\n\n		foreach ($userPics as $photo) {\n			# code...\n			//Debugbar::info($photo->images);\n\n			$pics = $photo->images;\n\n			foreach ($pics as $pic) {\n				# code...\n				Debugbar::info($pic);\n\n				$photos.\n			}\n		}\n\n		/*\n		*/\n		/*\n		return response()->json([\n    		'status' => 'okay',\n    		'data' => $userData\n    	]);\n		*/\n\n		return view('welcome');\n\n		/*\n		$helper = new FacebookRedirectLoginHelper('http://wedding.local/api/public/photos');\n		try {\n		  	$session = $helper->getSessionFromRedirect();\n		  	//Log::info('$session: ' . $session);\n		} catch(FacebookRequestException $ex) {\n\n		  	// When Facebook returns an error\n			return response()->json([\n	    		'status' => 'error',\n	    		'data' => $ex\n	    	]);\n\n		} catch(\\Exception $ex) {\n\n		  	// When validation fails or other local issues\n			return response()->json([\n	    		'status' => 'error',\n	    		'data' => $ex\n	    	]);\n\n		}\n\n		if ($session) {\n\n\n			$accessToken = $session->getAccessToken();\n			Log::info('$accessToken: ' . $accessToken);\n			Log::info('$accessToken: ' . gettype($accessToken));\n\n\n			$longLivedAccessToken = $accessToken->extend();\n			Log::info('$longLivedAccessToken: ' . $longLivedAccessToken);\n\n\n			return response()->json([\n	    		'status' => 'okay',\n	    		'accessToken' => (string)$accessToken,\n	    		'longLivedAccessToken' => (string)$longLivedAccessToken\n	    	]);\n\n		  	\n		  	// Logged in\n			\n			$request = new FacebookRequest(\n			  $session,\n			  'GET',\n			  '/me/photos'\n			);\n			$response = $request->execute();\n			$graphObject = $response->getGraphObject();\n			\n\n			return response()->json([\n	    		'status' => 'okay',\n	    		'data' => $graphObject,\n	    		'session' => $session,\n	    		'response' => $response\n	    	]);\n		}\n		*/\n\n		//CAAFWtNHpHFwBACtLfFeQUamYpQZAFmr8ZAyU095BPHBJ5CVQKZCzfJCCNuYWzoMA1C9ptjGiwhhLH66kZCaRuvHZBrZA9dvnPMLD4384lwzxB9ZA2P30rOhXWqEPL0YeaAyr3WAD2gLe58F2okpoKgFKyGBQW7i0G3d9bRzFNfuk9JJuTNJMjcA4ZBZBUhEJVB2MNdcNR1P8A4jKbx73QSXnA\n  \n	}\n\n}\n",
+			"file": "api/app/Http/Controllers/PhotosController.php",
+			"file_size": 5043,
+			"file_write_time": 1431373886000000,
+			"settings":
+			{
+				"buffer_size": 5057,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/widget-photos-admin/template.html",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/widget-photos-admin/def.coffee",
+			"settings":
+			{
+				"buffer_size": 2035,
+				"line_ending": "Unix",
+				"name": "define ["
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4310,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/js/app.js",
+			"settings":
+			{
+				"buffer_size": 4085,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/widget-map/def.coffee",
+			"settings":
+			{
+				"buffer_size": 3266,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 301.0,
+		"selected_items":
+		[
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"pret",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/Adobe Photoshop CS6/Presets/Scripts/BatchAddresses.jsx",
+		"/Users/james/Downloads/Wedding Invitation Addresses - Day.csv",
+		"/Users/james/Sites/wedding/api/storage/logs/laravel-2015-05-10.log",
+		"/Users/james/Sites/wedding/gulpfile.js",
+		"/Users/james/Sites/wedding/node_modules/teamwork-coffeelint-rules/coffeelint.json",
+		"/Users/james/Sites/wedding/node_modules/coffeelint/coffeelint.json",
+		"/Users/james/Sites/wedding/api/config/app.php",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/LaravelFacebookStorageController.php",
+		"/Users/james/Sites/wedding/api/vendor/composer/autoload_classmap.php",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/WelcomeController.php",
+		"/Users/james/Sites/wedding/api/config/debugbar.php",
+		"/Users/james/Sites/wedding/api/storage/logs/laravel-2015-05-09.log",
+		"/Users/james/Downloads/indie_font_bundle/Anodyne_Yellow_Design_Studio/web-fonts/stylesheet.css",
+		"/Applications/Adobe Photoshop CS6/Presets/Scripts/Photomerge.jsx",
+		"/Users/james/Desktop/addresses.csv",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.html",
+		"/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+		"/Users/james/Sites/wedding/api/app/Providers/RouteServiceProvider.php",
+		"/Users/james/Sites/wedding/index.html",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php",
+		"/Users/james/Sites/wedding/api/app/Http/routes.php",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/Users/james/Sites/wedding/src/less/styles.less",
+		"/Users/james/Sites/wedding/src/app/components/widget-map/template.html",
+		"/Users/james/Sites/wedding/src/app/components/widget-map/def.js",
+		"/Users/james/Sites/wedding/api/composer.json",
+		"/Users/james/Sites/wedding/src/app/index.html",
+		"/Users/james/Sites/wedding/api/app/Http/Kernel.php",
+		"/Users/james/Sites/wedding/api/bootstrap/app.php",
+		"/Users/james/Sites/index.php",
+		"/Users/james/Sites/info.php",
+		"/private/etc/apache2/users/james.conf",
+		"/etc/apache2/httpd.conf",
+		"/private/etc/php.ini",
+		"/Users/james/Sites/wedding/api2/app/Http/routes.php",
+		"/Users/james/Sites/wedding/api/public/index.php",
+		"/private/var/log/apache2/error_log",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/conf/app.conf",
+		"/Users/james/Sites/wedding/api/bootstrap/autoload.php",
+		"/Users/james/Sites/wedding/api/server.php",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers/userController.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/userModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers/ticketController.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/inboxModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/installationModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/sessionModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers/inboxController.go",
+		"/Users/james/Sites/backup/wedding/api2/server.php",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/temp/dbUpdates.sql",
+		"/private/etc/hosts",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/modules/mail.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/modules/getdrip/getdrip.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/modules/onboarding.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers/settingController.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/interceptors/authentication.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/vagrant/mysql/teamworkpm_master.sql",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/vagrant/mysql/teamworkdesk_shard6.sql",
+		"/Users/james/Sites/teamwork.com-website-2015/index.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/modules/cache/redis.go",
+		"/Users/james/redis-2.8.19/dump.rdb",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/temp/dbUpdates.txt",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/tests/attachmentTests.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/.vendor/src/code.google.com/p/go.tools/godoc/template.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-login/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-login/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/settingModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/models/userModel.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/config/components.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/startup.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/index.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-ticket-view/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/widget-payment-details/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/require.config.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/models/teamworkDesk.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers/billingController.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/build/index.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-view-invoice/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/widget-payment-history/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/init.coffee",
+		"/private/etc/apache2/httpd.conf",
+		"/private/etc/apache2/extra/httpd.vhosts.conf~orig",
+		"/private/etc/apache2/extra/httpd.vhosts.conf",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-team-happiness-timeseries/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-overview-performance/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-view-invoice/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-overview/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/css/temp.css",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models/billingModel.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-team-volume-tickets/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-docs-top-searches/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-dashInboxes-ticketsByChannel/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/config/components.js",
+		"/Users/james/Sites/wedding/src/app/js/require.config.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/models/userModel.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/socket.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/coffeewatch.bat",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/win/clean.bat",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/win/run.bat",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/widget-payment-history/def.coffee",
+		"/Users/james/Sites/wedding/app/components/widget-map/def.coffee",
+		"/Users/james/Sites/wedding/app/components/widget-map:def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/widget-payment-details/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-customer-edit/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-customer-edit/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/config/filters.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/config/bindings.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/router.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/less/fonts.less",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/.vendor/src/code.google.com/p/go.tools/present/parse.go",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/conf/routes",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/views/emails/billing/receipt.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-new-cannedresponse/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-new-cannedresponse/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-cannedresponses/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoices/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoices/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-billing/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/libs/bower/crossroads/dist/crossroads.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoice/template.html",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoice/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-tickets/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-reports/def.coffee",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-billing/template.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			"/Users/james/Sites/wedding",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/app/components",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/models",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/models",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/controllers",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend",
+			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
+			"/Users/james/Sites/teamworkpm/autoupdate",
+			"/Users/james/Sites/teamworkpm/",
+			"/Users/james/Sites/teamworkpm/autoupdate",
+			"/private,/Users/james",
+			"/private",
+			"/Users/james/Sites/",
+			"/Users/james/Sites/teamworkpm",
+			"/Users/james/Sites/teamwork.com/siteEngine",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"notifier",
+			"//",
+			"storeFacebookToken",
+			"initializePhotos",
+			"newVal",
+			"//",
+			"statusChangeCallback",
+			"testAPI",
+			"test",
+			"initializeFacebook",
+			"notifier",
+			"widget-photos",
+			"photos",
+			"fbAsyncInit",
+			"testAPI",
+			"statusChangeCallback",
+			"testAPI",
+			"//",
+			"echo",
+			"accessToken",
+			"session",
+			"1",
+			"\\n",
+			"activeDocument",
+			"\"address\"",
+			"\"name\"",
+			"Name",
+			"name",
+			"app",
+			"RSVPController",
+			"teamworkpm",
+			"DocumentRoot",
+			"require a",
+			"james",
+			"error_reporting",
+			"timezone",
+			"teamwork.com-website-2015",
+			"mailgun",
+			"/activate",
+			"@languages",
+			"langua",
+			"sendinvite",
+			"send invite",
+			"activat",
+			"invit",
+			"IsDripActivated",
+			"dkim",
+			"has not been enabled on your account",
+			"ErrNotSetupInDesk",
+			"The installation exists in PM, but has not yet been created in desk",
+			"branding.json",
+			"timeformatid",
+			".DeskInstallation",
+			"UserSession",
+			"UserSession.",
+			"UserSession",
+			"xxx",
+			"Session.user",
+			"Session",
+			"zero",
+			"SessionVersion",
+			"s.DeskInstallation.AppOwnerUserId",
+			"is zero",
+			"if s.DeskInstallation.AppOwnerUserId == 0 {",
+			"AppOwnerUserId",
+			"AppendTWProjectsUserData",
+			"user.Email",
+			"session.Email",
+			"session.email",
+			"session.useremail",
+			"session.email",
+			"// post",
+			"post",
+			"getappowner",
+			"AppOwnerUserId",
+			"truth",
+			"isappowner",
+			"dripAPIKey",
+			"AddedFirstInbox",
+			"Onboarding",
+			"AddInbox(",
+			"AddInbox",
+			"session.FirstName",
+			"session",
+			"session.useremail",
+			"session.email",
+			".email",
+			"firstname",
+			"session.firstname",
+			"user.firstn",
+			"session.user",
+			"session.",
+			"struct {",
+			"[]struct",
+			"]struct",
+			"[]",
+			"RegisterEventArgs",
+			"SiteOwnerEmail",
+			"adding template:",
+			"SetupInstallationOnFirstLogin",
+			"UserDb",
+			"dbDeskUser",
+			"SetupInstallationOnFirstLogin",
+			"createinst",
+			"SetupInstallationOnFirstLogin",
+			"session.DeskInstallation.AppOwnerUserId is zero",
+			"InitDrip",
+			"SetupInstallationOnFirstLogin",
+			"getdrip",
+			"onboa",
+			"languageco",
+			"GetInstallationFromDomain",
+			"v1/settings/branding.json",
+			"isValidDomain",
+			"sorry, but the site ",
+			"*/",
+			"virtual",
+			"method: 'POST",
+			"method: \"POST",
+			"ajax",
+			"applyBindings",
+			".subscribe",
+			"desk.Init ",
+			"app.Init ",
+			"app.Init(",
+			"app.Init",
+			"startup",
+			"new Teamw"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"c.User.Installation.",
+			"REQUEST.daysAlreadyPaidFor",
+			"/",
+			".data('item'",
+			".attr('data-item'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 9,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 3393,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										258,
+										272
+									],
+									[
+										424,
+										438
+									],
+									[
+										633,
+										647
+									],
+									[
+										1042,
+										1056
+									],
+									[
+										1095,
+										1109
+									],
+									[
+										1413,
+										1427
+									],
+									[
+										1568,
+										1582
+									],
+									[
+										1911,
+										1925
+									],
+									[
+										2203,
+										2216
+									],
+									[
+										2225,
+										2238
+									],
+									[
+										2304,
+										2317
+									],
+									[
+										2320,
+										2333
+									],
+									[
+										2469,
+										2482
+									],
+									[
+										2641,
+										2654
+									],
+									[
+										2772,
+										2785
+									],
+									[
+										2917,
+										2930
+									],
+									[
+										3069,
+										3082
+									],
+									[
+										3207,
+										3220
+									],
+									[
+										3312,
+										3325
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								2478,
+								2478
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 870.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/components/widget-photos/template.html",
+					"settings":
+					{
+						"buffer_size": 885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								658,
+								644
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/components/widget-photos/def.coffee",
+					"settings":
+					{
+						"buffer_size": 839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								738,
+								738
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "api/app/Http/routes.php",
+					"settings":
+					{
+						"buffer_size": 767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								458,
+								458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "api/app/Http/Controllers/RSVPController.php",
+					"settings":
+					{
+						"buffer_size": 1569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "api/app/Http/Controllers/PhotosController.php",
+					"settings":
+					{
+						"buffer_size": 5057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2778,
+								2778
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1297.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/app/components/widget-photos-admin/template.html",
+					"settings":
+					{
+						"buffer_size": 227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/app/components/widget-photos-admin/def.coffee",
+					"settings":
+					{
+						"buffer_size": 2035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1853,
+								1853
+							]
+						],
+						"settings":
+						{
+							"auto_name": "define [",
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 379.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4289,
+								4289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/app/js/app.js",
+					"settings":
+					{
+						"buffer_size": 4085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 172.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/app/components/widget-map/def.coffee",
+					"settings":
+					{
+						"buffer_size": 3266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GoSublime-main-output":
+	{
+		"height": 98.0
+	},
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"photoadmintemp",
+				"src/app/components/widget-photos-admin/template.html"
+			],
+			[
+				"photosdefcoff",
+				"src/app/components/widget-photos/def.coffee"
+			],
+			[
+				"mapdefcoff",
+				"src/app/components/widget-map/def.coffee"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"appjs",
+				"src/app/js/app.js"
+			],
+			[
+				"indexhtml",
+				"index.html"
+			],
+			[
+				"photoadmin",
+				"src/app/components/widget-photos-admin/template.html"
+			],
+			[
+				"appphp",
+				"api/config/app.php"
+			],
+			[
+				"welcomecontroller",
+				"api/app/Http/Controllers/WelcomeController.php"
+			],
+			[
+				"configdeb",
+				"api/config/debugbar.php"
+			],
+			[
+				"app.php",
+				"api/config/app.php"
+			],
+			[
+				"larface",
+				"api/app/Http/Controllers/LaravelFacebookStorageController.php"
+			],
+			[
+				"hoto",
+				"api/app/Http/Controllers/PhotosController.php"
+			],
+			[
+				"routerphp",
+				"api/vendor/laravel/framework/src/Illuminate/Routing/Router.php"
+			],
+			[
+				"rsv",
+				"api/app/Http/Controllers/RSVPController.php"
+			],
+			[
+				"photos",
+				"api/app/Http/Controllers/PhotosController.html"
+			],
+			[
+				"routes",
+				"api/app/Http/routes.php"
+			],
+			[
+				"photosdef",
+				"src/app/components/widget-photos/def.coffee"
+			],
+			[
+				"template",
+				"src/app/components/widget-photos/template.html"
+			],
+			[
+				"appco",
+				"conf/app.conf"
+			],
+			[
+				"db",
+				"temp/dbUpdates.sql"
+			],
+			[
+				"userco",
+				"app/controllers/userController.go"
+			],
+			[
+				"inboxc",
+				"app/controllers/inboxController.go"
+			],
+			[
+				"usercontroller",
+				"app/controllers/userController.go"
+			],
+			[
+				"usermodel",
+				"app/models/userModel.go"
+			],
+			[
+				"dbup",
+				"temp/dbUpdates.sql"
+			],
+			[
+				"modulesm",
+				"app/modules/mail.go"
+			],
+			[
+				"usercon",
+				"app/controllers/userController.go"
+			],
+			[
+				"ticketc",
+				"app/controllers/ticketController.go"
+			],
+			[
+				"insta",
+				"app/models/installationModel.go"
+			],
+			[
+				"inboxmodel",
+				"app/models/inboxModel.go"
+			],
+			[
+				"shard",
+				"vagrant/mysql/teamworkdesk_shard6.sql"
+			],
+			[
+				"vagrant",
+				"vagrant/mysql/teamworkpm_master.sql"
+			],
+			[
+				"red",
+				"app/modules/cache/redis.go"
+			],
+			[
+				"sessionm",
+				"app/models/sessionModel.go"
+			],
+			[
+				"user",
+				"app/models/userModel.go"
+			],
+			[
+				"template.go",
+				".vendor/src/code.google.com/p/go.tools/godoc/template.go"
+			],
+			[
+				"app",
+				"conf/app.conf"
+			],
+			[
+				"getdr",
+				"app/modules/getdrip/getdrip.go"
+			],
+			[
+				"updates",
+				"temp/dbUpdates.sql"
+			],
+			[
+				"settinmode",
+				"app/models/settingModel.go"
+			],
+			[
+				"page-login",
+				"frontend/src/app/components/page-login/def.coffee"
+			],
+			[
+				"billin",
+				"app/controllers/billingController.go"
+			],
+			[
+				"indexh",
+				"frontend/src/index.html"
+			],
+			[
+				"teamwo",
+				"frontend/src/app/models/teamworkDesk.coffee"
+			],
+			[
+				"require",
+				"frontend/src/app/require.config.js"
+			],
+			[
+				"paymentdeta",
+				"frontend/src/app/components/widget-payment-details/template.html"
+			],
+			[
+				"paymencoffee",
+				"frontend/src/app/components/widget-payment-details/def.coffee"
+			],
+			[
+				"appconf",
+				"conf/app.conf"
+			],
+			[
+				"router.coff",
+				"frontend/src/app/router.coffee"
+			],
+			[
+				"tempcss",
+				"frontend/src/css/temp.css"
+			],
+			[
+				"components.coffee",
+				"frontend/src/app/config/components.coffee"
+			],
+			[
+				"temp",
+				"frontend/src/css/temp.css"
+			],
+			[
+				"receipt",
+				"app/views/emails/billing/receipt.html"
+			],
+			[
+				"newcannedte",
+				"frontend/src/app/components/modal-new-cannedresponse/template.html"
+			],
+			[
+				"canned",
+				"frontend/src/app/components/modal-new-cannedresponse/def.coffee"
+			],
+			[
+				"pagesettingscoff",
+				"frontend/src/app/components/page-settings/def.coffee"
+			],
+			[
+				"index.coffee",
+				"frontend/build/index.coffee"
+			],
+			[
+				"components.coff",
+				"frontend/src/app/config/components.coffee"
+			],
+			[
+				"pagesettingstab",
+				"frontend/src/app/components/page-settings-tab-billing/def.coffee"
+			],
+			[
+				"frontendticketdefcoffee",
+				"frontend/src/app/components/section-ticket-view/def.coffee"
+			],
+			[
+				"invoicetem",
+				"frontend/src/app/components/section-settings-billing-invoices/template.html"
+			],
+			[
+				"invoices",
+				"frontend/src/app/components/section-settings-billing-invoices/def.coffee"
+			],
+			[
+				"configcompo",
+				"frontend/src/app/config/components.coffee"
+			],
+			[
+				"buildindex",
+				"frontend/build/index.coffee"
+			],
+			[
+				"pagesettingst",
+				"frontend/src/app/components/page-settings/template.html"
+			],
+			[
+				"pagesettings",
+				"frontend/src/app/components/page-settings/def.coffee"
+			],
+			[
+				"frontendroute",
+				"frontend/src/app/router.coffee"
+			],
+			[
+				"crossroa",
+				"frontend/src/libs/bower/crossroads/dist/crossroads.js"
+			],
+			[
+				"router",
+				"frontend/src/app/router.coffee"
+			],
+			[
+				"route",
+				"frontend/src/libs/bower/crossroads/dev/src/route.js"
+			],
+			[
+				"widget-payment-history",
+				"frontend/src/app/components/widget-payment-history/template.html"
+			],
+			[
+				"bower",
+				"frontend/bower.json"
+			],
+			[
+				"requirec",
+				"frontend/src/app/require.config.js"
+			],
+			[
+				"index.co",
+				"frontend/build/index.coffee"
+			],
+			[
+				"billingdefjs",
+				"frontend/src/app/components/section-settings-billing-payment/def.js"
+			],
+			[
+				"billingdef",
+				"frontend/src/app/components/section-settings-billing-payment/def.coffee"
+			],
+			[
+				"billingtemp",
+				"frontend/src/app/components/section-settings-billing-payment/template.html"
+			],
+			[
+				"paymen",
+				"app/views/emails/billing/failed_payment_customer.html"
+			],
+			[
+				"cus",
+				"app/controllers/customerController.go"
+			],
+			[
+				"mail",
+				"app/modules/mail.go"
+			],
+			[
+				"ticketm",
+				"app/models/ticketModel.go"
+			],
+			[
+				"ticket",
+				"app/controllers/ticketController.go"
+			],
+			[
+				"log",
+				"app/modules/logging.go"
+			],
+			[
+				"dtabase",
+				"app/modules/database.go"
+			],
+			[
+				".md",
+				"README.md"
+			],
+			[
+				"dbu",
+				"temp/dbUpdates.txt"
+			],
+			[
+				"init",
+				"app/init.go"
+			],
+			[
+				"database.go",
+				"app/modules/database.go"
+			],
+			[
+				"nav-mainte",
+				"frontend/src/app/components/nav-main/template.html"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"requi",
+				"frontend/test/require.config.js"
+			],
+			[
+				"ticketco",
+				"app/controllers/ticketController.go"
+			],
+			[
+				"app.con",
+				"conf/app.conf"
+			],
+			[
+				"companyhourste",
+				"frontend/src/app/components/section-settings-company-hours/template.html"
+			],
+			[
+				"frontendbilltemp",
+				"frontend/src/app/components/section-settings-billing-payment/template.html"
+			],
+			[
+				"frontendbilling",
+				"frontend/src/app/components/section-settings-billing-payment/def.coffee"
+			],
+			[
+				"",
+				"app/controllers/billingController.go"
+			],
+			[
+				"processstripepayment",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/act_ProcessStripePayment.cfm"
+			],
+			[
+				"paymentformstr",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_creditCardStripe.cfm"
+			],
+			[
+				"index",
+				"index.cfm"
+			],
+			[
+				"datas",
+				"cms/datasource.cfm"
+			],
+			[
+				"pagescfccomm",
+				"pages/cfc/comments.cfc"
+			],
+			[
+				"checktrial",
+				"pages/includes/page_dashboard/inc_sidebar_checkTrialOver.cfm"
+			],
+			[
+				"incmak",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_makepayment.cfm"
+			],
+			[
+				"incpaymentformcr",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_CreditCard2.cfm"
+			],
+			[
+				"incpaypal",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_Paypal.cfm"
+			],
+			[
+				"billingcss",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/css/billing.teamworkpm.net.css"
+			],
+			[
+				"stripe",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_creditCardStripe.cfm"
+			],
+			[
+				"a",
+				"ApplicationProxy.cfc"
+			],
+			[
+				"dev",
+				"inc_developerModeOnOff.cfm"
+			],
+			[
+				"actprocess",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/act_processPayment.cfm"
+			],
+			[
+				"subscri",
+				"pages/cfc/subscriptionPayments.cfc"
+			],
+			[
+				"processs",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/act_ProcessStripePayment.cfm"
+			],
+			[
+				"stripecallback",
+				"pages/actions/stripeCallback/index.cfm"
+			],
+			[
+				"inc_act_paymentform_getbillingcountryandvatinfo.cfm",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_act_paymentForm_GetBillingCountryAndVATInfo.cfm"
+			],
+			[
+				"pagesincludessubscrip",
+				"pages/includes/page_subscription/inc_subscription.cfm"
+			],
+			[
+				"stripeca",
+				"pages/actions/stripeCallback/index.cfm"
+			],
+			[
+				"makep",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_makepayment.cfm"
+			],
+			[
+				"creditcard",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_creditCardStripe.cfm"
+			],
+			[
+				"billingmakep",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_makepayment.cfm"
+			],
+			[
+				"incmake",
+				"pages/includes/page_subscription/inc_makepayment.cfm"
+			],
+			[
+				"billingtemworkindex",
+				"pages/includes/page_externalsitepage/billing.teamworkpm.net/index.cfm"
+			],
+			[
+				"indexcfm",
+				"index.cfm"
+			],
+			[
+				"includesprocess",
+				"twSiteEngine/includes/inc_processPageRequest.cfm"
+			],
+			[
+				"pagesdeter",
+				"pages/includes/inc_determineInstallation.cfm"
+			],
+			[
+				"deter",
+				"inc_determineInstallation.cfm"
+			],
+			[
+				"dsphome",
+				"pages/dsp_home.cfm"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/james/Sites/teamworkpm/teamworkpm.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 187.0,
+	"status_bar_visible": true
+}

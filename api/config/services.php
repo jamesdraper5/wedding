@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => 'mg.lucyandjameswedding.com',
-		'secret' => '5f6a1cb9607cc4d247c543d58ab11e38',
+		'domain' => '',
+		'secret' => '',
 	],
 
 	'mandrill' => [

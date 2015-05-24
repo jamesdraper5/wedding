@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://wedding.local/api',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -144,9 +144,8 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
-		/* Allow CORS for api.domain.com */
-		'Barryvdh\Cors\CorsServiceProvider',
 	],
 
 	/*
@@ -172,6 +171,7 @@ return [
 		'Cookie'    => 'Illuminate\Support\Facades\Cookie',
 		'Crypt'     => 'Illuminate\Support\Facades\Crypt',
 		'DB'        => 'Illuminate\Support\Facades\DB',
+		'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 		'Eloquent'  => 'Illuminate\Database\Eloquent\Model',
 		'Event'     => 'Illuminate\Support\Facades\Event',
 		'File'      => 'Illuminate\Support\Facades\File',

@@ -1,20 +1,61 @@
 <section id="photos" class="main-section row hidden-print">
 
-	<h1 class="ribbon text-center">Photos</h1>
+	<div class="row">
+	
+		<h1 class="ribbon text-center">Photos</h1>
 
-	<!-- ko if: app.getDaysToWedding() > 0 -->
-	<p class="text-center">Nothing here yet, but come back in <span data-bind="text: app.getDaysToWedding()"></span> days for a few snaps</p>
-	<hr>
-	<!-- /ko -->
+		<!-- ko if: app.getDaysToWedding() > 0 -->
+		<p class="text-center">Nothing here yet, but come back in <span data-bind="text: app.getDaysToWedding()"></span> days for a few snaps</p>
+		<hr>
+		<!-- /ko -->
+		
+		<div class="col-md-6 col-md-offset-3">
 
-	<div>
-		<img src="http://placekitten.com/340/200" alt="..." class="img-responsive img-thumbnail">
-		<img src="http://placekitten.com/340/200" alt="..." class="img-responsive img-thumbnail">
-		<img src="http://placekitten.com/340/200" alt="..." class="img-responsive img-thumbnail">
+			<div id="photos-carousel" class="carousel slide" data-ride="carousel">
+			  	
+			  	<!-- Indicators 
+			  	<ol class="carousel-indicators">
+				    <li data-target="#photos-carousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#photos-carousel" data-slide-to="1"></li>
+				    <li data-target="#photos-carousel" data-slide-to="2"></li>
+			  	</ol>
+				 -->
+
+			  	<!-- Wrapper for slides -->
+			  	<div class="carousel-inner" role="listbox">
+			  		<!-- ko if: photos().length === 0 --> 
+					    <div class="item active">
+							<div class="loader">Loading...</div>
+					    </div>
+			  		<!-- /ko -->
+			  		<!-- ko if: photos().length > 0 --> 
+						<!-- ko foreach: photos --> 
+					    <div class="item" data-bind="css: { active: $index() == 0 }">
+							<img data-bind="attr: { src: link }" alt="Lucy and James" class="img-responsive" />
+					    </div>
+						<!-- /ko -->
+			  		<!-- /ko -->
+
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#photos-carousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#photos-carousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+
+		</div>
+
 	</div>
 	<br/>
+	
 
-	<p class="text-center">If you tag Lucy or James in any photos on Facebook, or use the hashtag #lucyandjameswedding on Twitter or Flickr, we'll add your pictures here :-)</p>
+	<p class="text-center">If you tag Lucy or James in any photos on Facebook on their wedding day, or use the hashtag #lucyandjameswedding on Twitter or Flickr, we'll add your pictures here :-)</p>
 	<hr>
 
 </section>

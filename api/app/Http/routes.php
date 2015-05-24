@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('facebookLogin', 'PhotosController@getFacebookLoginUrl');
+
+Route::get('photos', 'PhotosController@getTaggedPhotos');
+
 Route::post('rsvp', 'RSVPController@sendResponse');
 
 Route::get('/', 'WelcomeController@index');
