@@ -1,35 +1,28 @@
+<!-- ko if: photosLoaded() -->
 <section id="photos" class="main-section row hidden-print">
 
 	<div class="row">
-	
+
 		<h1 class="ribbon text-center">Photos</h1>
 
 		<!-- ko if: app.getDaysToWedding() > 0 -->
 		<p class="text-center">Nothing here yet, but come back in <span data-bind="text: app.getDaysToWedding()"></span> days for a few snaps</p>
 		<hr>
 		<!-- /ko -->
-		
+
 		<div class="col-md-6 col-md-offset-3">
 
 			<div id="photos-carousel" class="carousel slide" data-ride="carousel">
-			  	
-			  	<!-- Indicators 
-			  	<ol class="carousel-indicators">
-				    <li data-target="#photos-carousel" data-slide-to="0" class="active"></li>
-				    <li data-target="#photos-carousel" data-slide-to="1"></li>
-				    <li data-target="#photos-carousel" data-slide-to="2"></li>
-			  	</ol>
-				 -->
 
 			  	<!-- Wrapper for slides -->
 			  	<div class="carousel-inner" role="listbox">
-			  		<!-- ko if: photos().length === 0 --> 
+			  		<!-- ko if: photos().length === 0 -->
 					    <div class="item active">
 							<div class="loader">Loading...</div>
 					    </div>
 			  		<!-- /ko -->
-			  		<!-- ko if: photos().length > 0 --> 
-						<!-- ko foreach: photos --> 
+			  		<!-- ko if: photos().length > 0 -->
+						<!-- ko foreach: photos -->
 					    <div class="item" data-bind="css: { active: $index() == 0 }">
 							<img data-bind="attr: { src: link }" alt="Lucy and James" class="img-responsive" />
 					    </div>
@@ -53,9 +46,10 @@
 
 	</div>
 	<br/>
-	
 
-	<p class="text-center">If you tag Lucy or James in any photos on Facebook on their wedding day, or use the hashtag #lucyandjameswedding on Twitter or Flickr, we'll add your pictures here :-)</p>
+
+	<p class="text-center">If you tag Lucy and James in any photos on Facebook on their wedding day, we'll add your pictures here :-)</p>
 	<hr>
 
 </section>
+<!-- /ko -->

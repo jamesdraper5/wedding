@@ -7,7 +7,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         'widget-rsvp'
     ];
 
-    
+
     var component, i, len;
     for (i = 0, len = components.length; i < len; i++) {
         component = components[i];
@@ -16,9 +16,9 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         });
         //return;
     }
-    
 
-    
+
+
     var App = function() {
 
         // Global App Pub/Sub notifier
@@ -36,11 +36,11 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         this.alertMessage = ko.observable('');
         this.isAlertVisible = ko.observable(false);
         this.alertType = ko.observable('success');
-        
+
 
         this.Init();
     }
-    
+
     App.prototype.Init = function(opts) {
 
         window.app = this;
@@ -48,7 +48,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         ko.applyBindings();
 
         // TO DO: Make API call to get all dynamic site info from DB
-        // isFacebookTokenOkay = true; 
+        // isFacebookTokenOkay = true;
 
         if ( !this.isFacebookTokenOkay ) {
             this.initializeFacebook();
@@ -61,7 +61,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
     }
 
     App.prototype.notifyMapLoaded = function() {
-        
+
         this.notifier.notifySubscribers(true, "mapLoaded");
 
     };
@@ -69,7 +69,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
 
     // Facebook stuff
     App.prototype.initializeFacebook = function() {
-    	console.log('initializeFacebook');
+    	//console.log('initializeFacebook');
 		// Load the SDK asynchronously
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -81,11 +81,11 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
     }
 
     App.prototype.notifyFacebookEvent = function(response) {
-        console.log('notifyFacebookEvent');
+        //console.log('notifyFacebookEvent');
         this.notifier.notifySubscribers(response, "facebookEvent");
     };
 
-    
+
 	App.prototype.fbAsyncInit = function() {
 		var self = this.app;
 
@@ -142,7 +142,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         return classes;
 
     };
-    
+
     App.prototype.hideAlert = function(data, event) {
 
         console.log( 'this: ', this );

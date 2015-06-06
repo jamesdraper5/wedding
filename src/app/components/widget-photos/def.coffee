@@ -9,6 +9,7 @@ define [
         @weddingDate = app.weddingDate
         @timeToWedding = app.timeToWedding # This returns a relevant string depending on the length of time, e.g. "2 days" or "4 months"
         @photos = ko.observableArray([])
+        @photosLoaded =ko.observable false
 
         @initializePhotos()
 
@@ -18,9 +19,15 @@ define [
 
         self = @
 
-        $.getJSON('api/public/photos', (response) ->
-            self.photos(response.data)
-            return
+        $.getJSON('api/public/photos',
+            weddingdate: @weddingDate.format("YYYY-MM-DD"),
+            (response) ->
+                console.log 'response.data', response
+                self.photos(response.data)
+                if self.photos().length
+                    console.log 'here'
+                    self.photosLoaded true
+                return
 
         )
 

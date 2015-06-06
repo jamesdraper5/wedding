@@ -8,10 +8,10 @@
 		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="src/css/main.css">
 		<link rel="stylesheet" href="src/libs/bower/ladda/dist/ladda-themeless.min.css">
-		
+
 	</head>
 	<body class="container" data-spy="scroll" data-target="#main-nav">
-			
+
 		<header>
 			<nav id="main-nav" class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid">
@@ -48,7 +48,7 @@
 				<h1 id="main-header" class="row">
 					<span class="col-xs-12 col-md-3 col-md-offset-2 text-center">
 						<span class="text-primary pressed">Lucy</span><br>
-						<span class="script">Murphy</span> 
+						<span class="script">Murphy</span>
 					</span>
 					<span class="col-xs-12 col-md-2 pressed x-large text-center light">&amp;</span>
 					<span class="col-xs-12 col-md-3 text-center">
@@ -58,8 +58,9 @@
 				</h1>
 				<hr>
 				<h2 class="script" data-bind="text: app.weddingDateString"></h2>
-				
+
 			</div>
+
 		</header>
 
 		<section id="home" class="main-section row">
@@ -74,27 +75,27 @@
 		<!-- ko if: app.getDaysToWedding() > 0 -->
 			<widget-rsvp></widget-rsvp>
 		<!-- /ko -->
-		
-		<widget-photos-admin></widget-photos-admin>
-		
+
+		<!-- <widget-photos-admin></widget-photos-admin> -->
+
 
 		<widget-photos></widget-photos>
 
-		
+
 		<footer class="row">
 			<div class="center-block">
 				<a class="navbar-brand script" href="#home">L&amp;J</a>
-			</div>		
+			</div>
 		</footer>
 
 		<script src="src/app/js/require.config.js"></script>
 		<script data-main="src/app/js/main" src="src/libs/bower/requirejs/require.js"></script>
-		
-		
+
+
 
 		<script src="src/app/third-party.js"></script>
 
-		<!-- Facebook API stuff 
+		<!-- Facebook API stuff
 		<script>
 		  window.fbAsyncInit = function() {
 		    FB.init({

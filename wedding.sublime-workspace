@@ -120,80 +120,10 @@
 	"buffers":
 	[
 		{
-			"contents": "Searching 3688 files for \"RSVPController\"\n\n0 matches across 0 files\n\n\nSearching 5534 files for \"RSVPController\"\n\n/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.html:\n    6  use Facebook\\FacebookRedirectLoginHelper;\n    7  \n    8: class RSVPController extends Controller {\n    9  \n   10  	/*\n\n/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php:\n    4  use Mail;\n    5  \n    6: class RSVPController extends Controller {\n    7  \n    8  	/*\n\n/Users/james/Sites/wedding/api/app/Http/routes.php:\n   16  Route::get('photos', 'PhotosController@getTaggedPhotos');\n   17  \n   18: Route::post('rsvp', 'RSVPController@sendResponse');\n   19  \n   20  Route::get('/', 'WelcomeController@index');\n\n/Users/james/Sites/wedding/api/vendor/composer/autoload_classmap.php:\n   16      'App\\\\Http\\\\Controllers\\\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',\n   17      'App\\\\Http\\\\Controllers\\\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',\n   18:     'App\\\\Http\\\\Controllers\\\\RSVPController' => $baseDir . '/app/Http/Controllers/RSVPController.php',\n   19      'App\\\\Http\\\\Controllers\\\\WelcomeController' => $baseDir . '/app/Http/Controllers/WelcomeController.php',\n   20      'App\\\\Http\\\\Kernel' => $baseDir . '/app/Http/Kernel.php',\n\n/Users/james/Sites/wedding/api2/app/Http/Controllers/RSVPController.php:\n    4  use Mail;\n    5  \n    6: class RSVPController extends Controller {\n    7  \n    8  	/*\n\n/Users/james/Sites/wedding/api2/app/Http/routes.php:\n   12  */\n   13  \n   14: Route::post('rsvp', 'RSVPController@sendResponse');\n   15  \n   16  Route::get('/', 'WelcomeController@index');\n\n/Users/james/Sites/wedding/wedding.sublime-workspace:\n  171  		\"/Users/james/Sites/wedding/index.html\",\n  172  		\"/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.html\",\n  173: 		\"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php\",\n  174  		\"/Users/james/Sites/wedding/api/app/Http/routes.php\",\n  175  		\"/private/etc/apache2/extra/httpd-vhosts.conf\",\n\n8 matches across 7 files\n\n\nSearching 5699 files for \"widget-photos\"\n\n/Users/james/Sites/wedding/index.html:\n   76  		<!-- /ko -->\n   77  		\n   78: 		<widget-photos-admin></widget-photos-admin>\n   79  		\n   80  		<h1>LOUD NOISES</h1>\n   81  \n   82: 		<widget-photos></widget-photos>\n   83  \n   84  		\n\n/Users/james/Sites/wedding/src/app/js/app.js:\n    3      var components = [\n    4      	'widget-map',\n    5:     	'widget-photos',\n    6      	'widget-rsvp'\n    7      ];\n\n/Users/james/Sites/wedding/wedding.sublime-workspace:\n  131  		},\n  132  		{\n  133: 			\"file\": \"src/app/components/widget-photos/template.html\",\n  134  			\"settings\":\n  135  			{\n  ...\n  139  		},\n  140  		{\n  141: 			\"file\": \"src/app/components/widget-photos/def.coffee\",\n  142  			\"settings\":\n  143  			{\n  ...\n  690  				{\n  691  					\"buffer\": 2,\n  692: 					\"file\": \"src/app/components/widget-photos/template.html\",\n  693  					\"settings\":\n  694  					{\n  ...\n  717  				{\n  718  					\"buffer\": 3,\n  719: 					\"file\": \"src/app/components/widget-photos/def.coffee\",\n  720  					\"settings\":\n  721  					{\n  ...\n  981  			[\n  982  				\"photosdef\",\n  983: 				\"src/app/components/widget-photos/def.coffee\"\n  984  			],\n  985  			[\n  986  				\"template\",\n  987: 				\"src/app/components/widget-photos/template.html\"\n  988  			],\n  989  			[\n\n11 matches across 3 files\n",
+			"file": "api/config/app.php",
 			"settings":
 			{
-				"buffer_size": 3393,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos/template.html",
-			"settings":
-			{
-				"buffer_size": 885,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos/def.coffee",
-			"settings":
-			{
-				"buffer_size": 839,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "api/app/Http/routes.php",
-			"settings":
-			{
-				"buffer_size": 767,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "api/app/Http/Controllers/RSVPController.php",
-			"settings":
-			{
-				"buffer_size": 1569,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php namespace App\\Http\\Controllers;\n\nsession_start();\n//require 'vendor/autoload.php';\n\nuse Debugbar;\nuse Log;\nuse Mail;\nuse Request;\n\nuse Facebook\\FacebookSession;\nuse Facebook\\FacebookRedirectLoginHelper;\nuse Facebook\\FacebookRequest;\nuse Facebook\\Entities\\AccessToken;\n\nclass PhotosController extends Controller {\n\n	/*\n	|--------------------------------------------------------------------------\n	| Welcome Controller\n	|--------------------------------------------------------------------------\n	|\n	| This controller renders the \"marketing page\" for the application and\n	| is configured to only allow guests. Like most of the other sample\n	| controllers, you are free to modify or remove it as you desire.\n	|\n	*/\n\n	/**\n	 * Create a new controller instance.\n	 *\n	 * @return void\n	 */\n	public function __construct()\n	{\n		FacebookSession::setDefaultApplication('376809592527964', 'd762956112187c3eba3981287e6ead01');\n	}\n\n\n	/**\n	 * Show the application welcome screen to the user.\n	 *\n	 * @return Response\n	 */\n	public function getFacebookLoginUrl()\n	{	\n		\n		$helper = new FacebookRedirectLoginHelper('http://wedding.local/api/public/photos');\n		$loginUrl = $helper->getLoginUrl();\n\n		return response()->json([\n    		'status' => 'okay',\n    		'url' => $loginUrl\n    	]);\n\n	}\n\n\n	/**\n	 * Show the application welcome screen to the user.\n	 *\n	 * @return Response\n	 */\n	public function getTaggedPhotos()\n	{	\n\n\n		$accessToken = new AccessToken(\"CAAFWtNHpHFwBACtLfFeQUamYpQZAFmr8ZAyU095BPHBJ5CVQKZCzfJCCNuYWzoMA1C9ptjGiwhhLH66kZCaRuvHZBrZA9dvnPMLD4384lwzxB9ZA2P30rOhXWqEPL0YeaAyr3WAD2gLe58F2okpoKgFKyGBQW7i0G3d9bRzFNfuk9JJuTNJMjcA4ZBZBUhEJVB2MNdcNR1P8A4jKbx73QSXnA\");\n		Log::info('$accessToken: ' . $accessToken);\n		Log::info('$accessToken: ' . gettype($accessToken));\n\n\n		$longLivedAccessToken = $accessToken->extend();\n		Log::info('$longLivedAccessToken: ' . $longLivedAccessToken);\n\n\n		//$longLivedAccessToken = new AccessToken('CAAFTv0433EIBAIgyLvqsO1umeiKy0Qq1y85Nb9vZCXFJbsk5dhkxZB5YXGGq8mshW7IDmoHGR5fOX18XXuM3LeZBktSxjt4qdgXe0zN2q6kg3jCZAmZAKxXEMnY6JWEl6zw2OuA3Fdc35dFUsZArODTUeNlsLTaSfKx1OKY5xwhnMZCZAWF4TZA6z');\n\n		try {\n		  // Get a code from a long-lived access token\n		  $code = AccessToken::getCodeFromAccessToken($longLivedAccessToken);\n		} catch(FacebookSDKException $e) {\n		  Log::info('Error getting code: ' . $e->getMessage());\n		  exit;\n		}\n\n		try {\n		  // Get a new long-lived access token from the code\n		  $newLongLivedAccessToken = AccessToken::getAccessTokenFromCode($code);\n		} catch(FacebookSDKException $e) {\n		  Log::info('Error getting a new long-lived access token: ' . $e->getMessage());\n		  exit;\n		}\n\n		$accessTokenInfo = $newLongLivedAccessToken->getInfo();\n		Debugbar::info($accessTokenInfo);\n\n		// Make calls to Graph using $shortLivedAccessToken\n		$session = new FacebookSession($newLongLivedAccessToken);\n\n		$request = new FacebookRequest(\n			$session, \n			'GET', \n			'/me/photos'\n		);\n		$userData = $request->execute()\n		  	->getGraphObject()\n		  	->asArray();\n\n		Debugbar::info($userData);\n\n		$photos = [];\n		$userPics = $userData[\"data\"];\n\n		Debugbar::info($userPics);\n\n		foreach ($userPics as $photo) {\n			# code...\n			//Debugbar::info($photo->images);\n\n			$pics = $photo->images;\n\n			foreach ($pics as $pic) {\n				# code...\n				Debugbar::info($pic);\n\n				$photos.\n			}\n		}\n\n		/*\n		*/\n		/*\n		return response()->json([\n    		'status' => 'okay',\n    		'data' => $userData\n    	]);\n		*/\n\n		return view('welcome');\n\n		/*\n		$helper = new FacebookRedirectLoginHelper('http://wedding.local/api/public/photos');\n		try {\n		  	$session = $helper->getSessionFromRedirect();\n		  	//Log::info('$session: ' . $session);\n		} catch(FacebookRequestException $ex) {\n\n		  	// When Facebook returns an error\n			return response()->json([\n	    		'status' => 'error',\n	    		'data' => $ex\n	    	]);\n\n		} catch(\\Exception $ex) {\n\n		  	// When validation fails or other local issues\n			return response()->json([\n	    		'status' => 'error',\n	    		'data' => $ex\n	    	]);\n\n		}\n\n		if ($session) {\n\n\n			$accessToken = $session->getAccessToken();\n			Log::info('$accessToken: ' . $accessToken);\n			Log::info('$accessToken: ' . gettype($accessToken));\n\n\n			$longLivedAccessToken = $accessToken->extend();\n			Log::info('$longLivedAccessToken: ' . $longLivedAccessToken);\n\n\n			return response()->json([\n	    		'status' => 'okay',\n	    		'accessToken' => (string)$accessToken,\n	    		'longLivedAccessToken' => (string)$longLivedAccessToken\n	    	]);\n\n		  	\n		  	// Logged in\n			\n			$request = new FacebookRequest(\n			  $session,\n			  'GET',\n			  '/me/photos'\n			);\n			$response = $request->execute();\n			$graphObject = $response->getGraphObject();\n			\n\n			return response()->json([\n	    		'status' => 'okay',\n	    		'data' => $graphObject,\n	    		'session' => $session,\n	    		'response' => $response\n	    	]);\n		}\n		*/\n\n		//CAAFWtNHpHFwBACtLfFeQUamYpQZAFmr8ZAyU095BPHBJ5CVQKZCzfJCCNuYWzoMA1C9ptjGiwhhLH66kZCaRuvHZBrZA9dvnPMLD4384lwzxB9ZA2P30rOhXWqEPL0YeaAyr3WAD2gLe58F2okpoKgFKyGBQW7i0G3d9bRzFNfuk9JJuTNJMjcA4ZBZBUhEJVB2MNdcNR1P8A4jKbx73QSXnA\n  \n	}\n\n}\n",
-			"file": "api/app/Http/Controllers/PhotosController.php",
-			"file_size": 5043,
-			"file_write_time": 1431373886000000,
-			"settings":
-			{
-				"buffer_size": 5057,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos-admin/template.html",
-			"settings":
-			{
-				"buffer_size": 227,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos-admin/def.coffee",
-			"settings":
-			{
-				"buffer_size": 2035,
-				"line_ending": "Unix",
-				"name": "define ["
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 4310,
+				"buffer_size": 7208,
 				"line_ending": "Unix"
 			}
 		},
@@ -206,10 +136,58 @@
 			}
 		},
 		{
-			"file": "src/app/components/widget-map/def.coffee",
+			"file": "src/app/components/widget-photos/template.html",
 			"settings":
 			{
-				"buffer_size": 3266,
+				"buffer_size": 2085,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/components/widget-photos/def.coffee",
+			"settings":
+			{
+				"buffer_size": 866,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/app/Http/Controllers/PhotosController.php",
+			"settings":
+			{
+				"buffer_size": 5853,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4323,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/less/styles.less",
+			"settings":
+			{
+				"buffer_size": 2729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/app/Http/Controllers/RSVPController.php",
+			"settings":
+			{
+				"buffer_size": 1569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/config/mail.php",
+			"settings":
+			{
+				"buffer_size": 4068,
 				"line_ending": "Unix"
 			}
 		}
@@ -270,6 +248,15 @@
 	},
 	"file_history":
 	[
+		"/Users/james/Sites/wedding/src/app/third-party.js",
+		"/Users/james/Sites/wedding/src/libs/bower/bootstrap/less/variables.less",
+		"/Users/james/Sites/wedding/api/resources/assets/less/bootstrap/variables.less",
+		"/Users/james/Downloads/template.html",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php",
+		"/Users/james/Sites/wedding/src/app/components/widget-map/def.coffee",
+		"/Users/james/Sites/wedding/src/app/components/widget-photos-admin/template.html",
+		"/Users/james/Sites/wedding/src/app/components/widget-photos-admin/def.coffee",
+		"/Users/james/Sites/wedding/api/app/Http/routes.php",
 		"/Applications/Adobe Photoshop CS6/Presets/Scripts/BatchAddresses.jsx",
 		"/Users/james/Downloads/Wedding Invitation Addresses - Day.csv",
 		"/Users/james/Sites/wedding/api/storage/logs/laravel-2015-05-10.log",
@@ -289,8 +276,6 @@
 		"/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
 		"/Users/james/Sites/wedding/api/app/Providers/RouteServiceProvider.php",
 		"/Users/james/Sites/wedding/index.html",
-		"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php",
-		"/Users/james/Sites/wedding/api/app/Http/routes.php",
 		"/private/etc/apache2/extra/httpd-vhosts.conf",
 		"/Users/james/Sites/wedding/src/less/styles.less",
 		"/Users/james/Sites/wedding/src/app/components/widget-map/template.html",
@@ -390,14 +375,7 @@
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoices/def.coffee",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-billing/def.coffee",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/libs/bower/crossroads/dist/crossroads.js",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.js",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoice/template.html",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoice/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-tickets/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-reports/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-billing/template.html"
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.coffee"
 	],
 	"find":
 	{
@@ -408,6 +386,10 @@
 		"height": 106.0,
 		"where_history":
 		[
+			"/Users/james/Sites/wedding",
+			"/Users/james/Sites/wedding/api",
+			"/Users/james/Sites/wedding/",
+			"/Users/james/Sites/wedding/api",
 			"/Users/james/Sites/wedding",
 			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/",
 			"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/",
@@ -454,6 +436,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"array('*",
+			"array('*')",
+			"allowedOrigins",
+			"Access-Control-Allow-",
+			"Access-Control-Allow-Origin",
+			"wedding.local",
+			"dateFormatted",
+			"dateAdded",
+			"weddingDate",
+			"Time",
+			"weddingTime",
+			"createdTime",
+			"var ",
+			"photos-carousel",
+			"glyphicons-halflings",
+			"id=\"",
+			"carousel-example-generic",
+			"Log",
+			"data",
 			"notifier",
 			"//",
 			"storeFacebookToken",
@@ -562,26 +563,7 @@
 			"session.DeskInstallation.AppOwnerUserId is zero",
 			"InitDrip",
 			"SetupInstallationOnFirstLogin",
-			"getdrip",
-			"onboa",
-			"languageco",
-			"GetInstallationFromDomain",
-			"v1/settings/branding.json",
-			"isValidDomain",
-			"sorry, but the site ",
-			"*/",
-			"virtual",
-			"method: 'POST",
-			"method: \"POST",
-			"ajax",
-			"applyBindings",
-			".subscribe",
-			"desk.Init ",
-			"app.Init ",
-			"app.Init(",
-			"app.Init",
-			"startup",
-			"new Teamw"
+			"getdrip"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -604,344 +586,38 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "api/config/app.php",
 					"settings":
 					{
-						"buffer_size": 3393,
+						"buffer_size": 7208,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										258,
-										272
-									],
-									[
-										424,
-										438
-									],
-									[
-										633,
-										647
-									],
-									[
-										1042,
-										1056
-									],
-									[
-										1095,
-										1109
-									],
-									[
-										1413,
-										1427
-									],
-									[
-										1568,
-										1582
-									],
-									[
-										1911,
-										1925
-									],
-									[
-										2203,
-										2216
-									],
-									[
-										2225,
-										2238
-									],
-									[
-										2304,
-										2317
-									],
-									[
-										2320,
-										2333
-									],
-									[
-										2469,
-										2482
-									],
-									[
-										2641,
-										2654
-									],
-									[
-										2772,
-										2785
-									],
-									[
-										2917,
-										2930
-									],
-									[
-										3069,
-										3082
-									],
-									[
-										3207,
-										3220
-									],
-									[
-										3312,
-										3325
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								2478,
-								2478
+								455,
+								455
 							]
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"output_tag": 3,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/app/components/widget-photos/template.html",
-					"settings":
-					{
-						"buffer_size": 885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								658,
-								644
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/app/components/widget-photos/def.coffee",
-					"settings":
-					{
-						"buffer_size": 839,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								738,
-								738
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "api/app/Http/routes.php",
-					"settings":
-					{
-						"buffer_size": 767,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								458,
-								458
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "api/app/Http/Controllers/RSVPController.php",
-					"settings":
-					{
-						"buffer_size": 1569,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								37,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "api/app/Http/Controllers/PhotosController.php",
-					"settings":
-					{
-						"buffer_size": 5057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2778,
-								2778
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1297.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/app/components/widget-photos-admin/template.html",
-					"settings":
-					{
-						"buffer_size": 227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								193,
-								193
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/app/components/widget-photos-admin/def.coffee",
-					"settings":
-					{
-						"buffer_size": 2035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1853,
-								1853
-							]
-						],
-						"settings":
-						{
-							"auto_name": "define [",
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 379.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 4310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4289,
-								4289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "src/app/js/app.js",
 					"settings":
 					{
@@ -952,8 +628,8 @@
 						"selection":
 						[
 							[
-								597,
-								597
+								598,
+								598
 							]
 						],
 						"settings":
@@ -963,25 +639,52 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 172.0,
+						"translation.y": 194.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "src/app/components/widget-map/def.coffee",
+					"buffer": 2,
+					"file": "src/app/components/widget-photos/template.html",
 					"settings":
 					{
-						"buffer_size": 3266,
+						"buffer_size": 2085,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								442,
-								442
+								555,
+								555
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/components/widget-photos/def.coffee",
+					"settings":
+					{
+						"buffer_size": 866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								723,
+								723
 							]
 						],
 						"settings":
@@ -992,6 +695,141 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "api/app/Http/Controllers/PhotosController.php",
+					"settings":
+					{
+						"buffer_size": 5853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4217,
+								4217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2241.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3390,
+								3390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/less/styles.less",
+					"settings":
+					{
+						"buffer_size": 2729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1000,
+								1000
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 604.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "api/app/Http/Controllers/RSVPController.php",
+					"settings":
+					{
+						"buffer_size": 1569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								797,
+								797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "api/config/mail.php",
+					"settings":
+					{
+						"buffer_size": 4068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4062,
+								4062
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1119.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1048,6 +886,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"apimail",
+				"api/config/mail.php"
+			],
+			[
+				"rsvpc",
+				"api/app/Http/Controllers/RSVPController.php"
+			],
+			[
+				"stylesless",
+				"src/less/styles.less"
+			],
+			[
+				"variablesless",
+				"src/libs/bower/bootstrap/less/variables.less"
+			],
+			[
+				"variables",
+				"api/resources/assets/less/bootstrap/variables.less"
+			],
+			[
+				"thirdp",
+				"src/app/third-party.js"
+			],
 			[
 				"photoadmintemp",
 				"src/app/components/widget-photos-admin/template.html"
@@ -1535,30 +1397,6 @@
 			[
 				"incmake",
 				"pages/includes/page_subscription/inc_makepayment.cfm"
-			],
-			[
-				"billingtemworkindex",
-				"pages/includes/page_externalsitepage/billing.teamworkpm.net/index.cfm"
-			],
-			[
-				"indexcfm",
-				"index.cfm"
-			],
-			[
-				"includesprocess",
-				"twSiteEngine/includes/inc_processPageRequest.cfm"
-			],
-			[
-				"pagesdeter",
-				"pages/includes/inc_determineInstallation.cfm"
-			],
-			[
-				"deter",
-				"inc_determineInstallation.cfm"
-			],
-			[
-				"dsphome",
-				"pages/dsp_home.cfm"
 			]
 		],
 		"width": 0.0
@@ -1570,7 +1408,7 @@
 		[
 			[
 				"",
-				"/Users/james/Sites/teamworkpm/teamworkpm.sublime-project"
+				"/Users/james/Documents/seatplan/seatplan.sublime-project"
 			]
 		],
 		"width": 380.0
