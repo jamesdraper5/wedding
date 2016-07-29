@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"add",
+				"addGuest"
+			],
+			[
 				"noti",
 				"notifyFacebookEvent"
 			],
@@ -120,42 +124,20 @@
 	"buffers":
 	[
 		{
-			"file": "api/config/app.php",
+			"contents": "Searching 5504 files for \"APP_DEBUG\"\n\n/Users/james/Sites/wedding/api/.env:\n    1  APP_ENV=local\n    2: APP_DEBUG=true\n    3  APP_KEY=X6DkbBVRTKPtD1KFK1UR64rap2fmuB88\n    4  \n\n/Users/james/Sites/wedding/api/.env.example:\n    1  APP_ENV=local\n    2: APP_DEBUG=true\n    3  APP_KEY=SomeRandomString\n    4  \n\n/Users/james/Sites/wedding/api/config/app.php:\n   14  	*/\n   15  \n   16: 	'debug' => env('APP_DEBUG', true),\n   17  \n   18  	/*\n\n3 matches across 3 files\n\n\nSearching 5504 files for \"APP_ENV\"\n\n/Users/james/Sites/wedding/api/.env:\n    1: APP_ENV=local\n    2  APP_DEBUG=true\n    3  APP_KEY=X6DkbBVRTKPtD1KFK1UR64rap2fmuB88\n\n/Users/james/Sites/wedding/api/.env.example:\n    1: APP_ENV=local\n    2  APP_DEBUG=true\n    3  APP_KEY=SomeRandomString\n\n/Users/james/Sites/wedding/api/phpunit.xml:\n   16      </testsuites>\n   17      <php>\n   18:         <env name=\"APP_ENV\" value=\"testing\"/>\n   19          <env name=\"CACHE_DRIVER\" value=\"array\"/>\n   20          <env name=\"SESSION_DRIVER\" value=\"array\"/>\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/DetectEnvironment.php:\n   26  		$app->detectEnvironment(function()\n   27  		{\n   28: 			return env('APP_ENV', 'production');\n   29  		});\n   30  	}\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/ApplicationTrait.php:\n   34  	protected function refreshApplication()\n   35  	{\n   36: 		putenv('APP_ENV=testing');\n   37  \n   38  		$this->app = $this->createApplication();\n\n5 matches across 5 files\n\n\nSearching 5504 files for \"detectEnvironment\"\n\n/Users/james/Sites/wedding/api/vendor/composer/autoload_classmap.php:\n  401      'Illuminate\\\\Foundation\\\\Bootstrap\\\\BootProviders' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php',\n  402      'Illuminate\\\\Foundation\\\\Bootstrap\\\\ConfigureLogging' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Bootstrap/ConfigureLogging.php',\n  403:     'Illuminate\\\\Foundation\\\\Bootstrap\\\\DetectEnvironment' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Bootstrap/DetectEnvironment.php',\n  404      'Illuminate\\\\Foundation\\\\Bootstrap\\\\HandleExceptions' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php',\n  405      'Illuminate\\\\Foundation\\\\Bootstrap\\\\LoadConfiguration' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php',\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:\n  196  	{\n  197  		return $this->afterBootstrapping(\n  198: 			'Illuminate\\Foundation\\Bootstrap\\DetectEnvironment', $callback\n  199  		);\n  200  	}\n  ...\n  429  	 * @return string\n  430  	 */\n  431: 	public function detectEnvironment(Closure $callback)\n  432  	{\n  433  		$args = isset($_SERVER['argv']) ? $_SERVER['argv'] : null;\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/DetectEnvironment.php:\n    5  use Illuminate\\Contracts\\Foundation\\Application;\n    6  \n    7: class DetectEnvironment {\n    8  \n    9  	/**\n   ..\n   24  		}\n   25  \n   26: 		$app->detectEnvironment(function()\n   27  		{\n   28  			return env('APP_ENV', 'production');\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php:\n   37  	 */\n   38  	protected $bootstrappers = [\n   39: 		'Illuminate\\Foundation\\Bootstrap\\DetectEnvironment',\n   40  		'Illuminate\\Foundation\\Bootstrap\\LoadConfiguration',\n   41  		'Illuminate\\Foundation\\Bootstrap\\ConfigureLogging',\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Optimize/config.php:\n   54      $basePath.'/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php',\n   55      $basePath.'/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php',\n   56:     $basePath.'/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/DetectEnvironment.php',\n   57      $basePath.'/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php',\n   58      $basePath.'/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php',\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:\n   31  	 */\n   32  	protected $bootstrappers = [\n   33: 		'Illuminate\\Foundation\\Bootstrap\\DetectEnvironment',\n   34  		'Illuminate\\Foundation\\Bootstrap\\LoadConfiguration',\n   35  		'Illuminate\\Foundation\\Bootstrap\\ConfigureLogging',\n\n9 matches across 6 files\n\n\nSearching 5504 files for \"$env\"\n\n/Users/james/Sites/wedding/api/config/mail.php:\n  120  	*/\n  121  \n  122: 	'pretend' => $env,\n  123  \n  124  ];\n\n/Users/james/Sites/wedding/api/vendor/barryvdh/laravel-debugbar/src/Twig/Extension/Debug.php:\n   54       * (c) 2011 Fabien Potencier\n   55       *\n   56:      * @param Twig_Environment $env\n   57       * @param $context\n   58       */\n   59:     public function debug(Twig_Environment $env, $context)\n   60      {\n   61:         if (!$env->isDebug() || !$this->debugbar) {\n   62              return;\n   63          }\n\n/Users/james/Sites/wedding/api/vendor/barryvdh/laravel-debugbar/src/Twig/Extension/Dump.php:\n   50       * (c) 2011 Fabien Potencier\n   51       *\n   52:      * @param Twig_Environment $env\n   53       * @param $context\n   54       *\n   55       * @return string\n   56       */\n   57:     public function dump(Twig_Environment $env, $context)\n   58      {\n   59          $output = '';\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Console/Scheduling/Event.php:\n   46  	 * @var array\n   47  	 */\n   48: 	public $environments = [];\n   49  \n   50  	/**\n   ..\n  252  	 * Determine if the event runs in the given environment.\n  253  	 *\n  254: 	 * @param  string  $environment\n  255  	 * @return bool\n  256  	 */\n  257: 	public function runsInEnvironment($environment)\n  258  	{\n  259: 		return empty($this->environments) || in_array($environment, $this->environments);\n  260  	}\n  261  \n  ...\n  534  	 * Limit the environments the command should run in.\n  535  	 *\n  536: 	 * @param  array|dynamic  $environments\n  537  	 * @return $this\n  538  	 */\n  539: 	public function environments($environments)\n  540  	{\n  541: 		$this->environments = is_array($environments) ? $environments : func_get_args();\n  542  \n  543  		return $this;\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:\n  112  	 * @var string\n  113  	 */\n  114: 	protected $environmentFile = '.env';\n  115  \n  116  	/**\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/Queue/Listener.php:\n   18  	 * @var string\n   19  	 */\n   20: 	protected $environment;\n   21  \n   22  	/**\n   ..\n  196  	 * Set the current environment.\n  197  	 *\n  198: 	 * @param  string  $environment\n  199  	 * @return void\n  200  	 */\n  201: 	public function setEnvironment($environment)\n  202  	{\n  203: 		$this->environment = $environment;\n  204  	}\n  205  \n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/View/View.php:\n  119  	public function renderSections()\n  120  	{\n  121: 		$env = $this->factory;\n  122  \n  123: 		return $this->render(function($view) use ($env)\n  124  		{\n  125: 			return $env->getSections();\n  126  		});\n  127  	}\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php:\n  114  			$finder = $app['view.finder'];\n  115  \n  116: 			$env = new Factory($resolver, $finder, $app['events']);\n  117  \n  118  			// We will also set the container instance on this view environment since the\n  119  			// view composers may be classes registered in the container, which allows\n  120  			// for great testable, flexible composers for the application developer.\n  121: 			$env->setContainer($app);\n  122  \n  123: 			$env->share('app', $app);\n  124  \n  125: 			return $env;\n  126  		});\n  127  	}\n\n/Users/james/Sites/wedding/api/vendor/maximebf/debugbar/src/DebugBar/Bridge/Twig/TraceableTwigTemplate.php:\n   22  \n   23      /**\n   24:      * @param TraceableTwigEnvironment $env\n   25       * @param Twig_Template $template\n   26       */\n   27:     public function __construct(TraceableTwigEnvironment $env, Twig_Template $template)\n   28      {\n   29:         $this->env = $env;\n   30          $this->template = $template;\n   31      }\n\n/Users/james/Sites/wedding/api/vendor/maximebf/debugbar/src/DebugBar/Bridge/Twig/TwigCollector.php:\n   24   *\n   25   * <code>\n   26:  * $env = new TraceableTwigEnvironment(new Twig_Environment($loader));\n   27:  * $debugbar->addCollector(new TwigCollector($env));\n   28   * </code>\n   29   */\n\n/Users/james/Sites/wedding/api/vendor/sebastian/environment/tests/RuntimeTest.php:\n   18       * @var \\SebastianBergmann\\Environment\\Runtime\n   19       */\n   20:     private $env;\n   21  \n   22      protected function setUp()\n\n/Users/james/Sites/wedding/api/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpCache/Store.php:\n  255       *\n  256       * @param string $vary A Response vary header\n  257:      * @param array  $env1 A Request HTTP header array\n  258:      * @param array  $env2 A Request HTTP header array\n  259       *\n  260       * @return bool true if the two environments match, false otherwise\n  261       */\n  262:     private function requestsMatch($vary, $env1, $env2)\n  263      {\n  264          if (empty($vary)) {\n  ...\n  268          foreach (preg_split('/[\\s,]+/', $vary) as $header) {\n  269              $key = strtr(strtolower($header), '_', '-');\n  270:             $v1 = isset($env1[$key]) ? $env1[$key] : null;\n  271:             $v2 = isset($env2[$key]) ? $env2[$key] : null;\n  272              if ($v1 !== $v2) {\n  273                  return false;\n\n/Users/james/Sites/wedding/api/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Kernel.php:\n   54      protected $container;\n   55      protected $rootDir;\n   56:     protected $environment;\n   57      protected $debug;\n   58      protected $booted = false;\n   ..\n   71       * Constructor.\n   72       *\n   73:      * @param string $environment The environment\n   74       * @param bool   $debug       Whether to enable debugging or not\n   75       *\n   76       * @api\n   77       */\n   78:     public function __construct($environment, $debug)\n   79      {\n   80:         $this->environment = $environment;\n   81          $this->debug = (bool) $debug;\n   82          $this->rootDir = $this->getRootDir();\n   ..\n  779      public function unserialize($data)\n  780      {\n  781:         list($environment, $debug) = unserialize($data);\n  782  \n  783:         $this->__construct($environment, $debug);\n  784      }\n  785  }\n\n/Users/james/Sites/wedding/api/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/KernelTest.php:\n   26      public function testConstructor()\n   27      {\n   28:         $env = 'test_env';\n   29          $debug = true;\n   30:         $kernel = new KernelForTest($env, $debug);\n   31  \n   32:         $this->assertEquals($env, $kernel->getEnvironment());\n   33          $this->assertEquals($debug, $kernel->isDebug());\n   34          $this->assertFalse($kernel->isBooted());\n   ..\n   39      public function testClone()\n   40      {\n   41:         $env = 'test_env';\n   42          $debug = true;\n   43:         $kernel = new KernelForTest($env, $debug);\n   44  \n   45          $clone = clone $kernel;\n   46  \n   47:         $this->assertEquals($env, $clone->getEnvironment());\n   48          $this->assertEquals($debug, $clone->isDebug());\n   49          $this->assertFalse($clone->isBooted());\n   ..\n  380      public function testSerialize()\n  381      {\n  382:         $env = 'test_env';\n  383          $debug = true;\n  384:         $kernel = new KernelForTest($env, $debug);\n  385  \n  386:         $expected = serialize(array($env, $debug));\n  387          $this->assertEquals($expected, $kernel->serialize());\n  388      }\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/PhpProcess.php:\n   32       * @param string $script  The PHP script to run (as a string)\n   33       * @param string $cwd     The working directory\n   34:      * @param array  $env     The environment variables\n   35       * @param int    $timeout The timeout in seconds\n   36       * @param array  $options An array of options for proc_open\n   ..\n   38       * @api\n   39       */\n   40:     public function __construct($script, $cwd = null, array $env = array(), $timeout = 60, array $options = array())\n   41      {\n   42          $executableFinder = new PhpExecutableFinder();\n   ..\n   45          }\n   46  \n   47:         parent::__construct($php, $cwd, $env, $script, $timeout, $options);\n   48      }\n   49  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Process.php:\n   49      private $commandline;\n   50      private $cwd;\n   51:     private $env;\n   52      private $input;\n   53      private $starttime;\n   ..\n  134       * @param string         $commandline The command line to run\n  135       * @param string|null    $cwd         The working directory or null to use the working dir of the current PHP process\n  136:      * @param array|null     $env         The environment variables or null to inherit\n  137       * @param string|null    $input       The input\n  138       * @param int|float|null $timeout     The timeout in seconds or null to disable\n  ...\n  143       * @api\n  144       */\n  145:     public function __construct($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  146      {\n  147          if (!function_exists('proc_open')) {\n  ...\n  159              $this->cwd = getcwd();\n  160          }\n  161:         if (null !== $env) {\n  162:             $this->setEnv($env);\n  163          }\n  164  \n  ...\n 1040       * the $_ENV array for instance.\n 1041       *\n 1042:      * @param array $env The new environment variables\n 1043       *\n 1044       * @return self The current Process instance\n 1045       */\n 1046:     public function setEnv(array $env)\n 1047      {\n 1048          // Process can not handle env values that are arrays\n 1049:         $env = array_filter($env, function ($value) {\n 1050              return !is_array($value);\n 1051          });\n 1052  \n 1053          $this->env = array();\n 1054:         foreach ($env as $key => $value) {\n 1055              $this->env[(binary) $key] = (binary) $value;\n 1056          }\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/ProcessBuilder.php:\n   24      private $arguments;\n   25      private $cwd;\n   26:     private $env = array();\n   27      private $input;\n   28      private $timeout = 60;\n   ..\n  270          if ($this->inheritEnv) {\n  271              // include $_ENV for BC purposes\n  272:             $env = array_replace($_ENV, $_SERVER, $this->env);\n  273          } else {\n  274:             $env = $this->env;\n  275          }\n  276  \n  277:         $process = new Process($script, $this->cwd, $env, $this->input, $this->timeout, $options);\n  278  \n  279          if ($this->outputDisabled) {\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/AbstractProcessTest.php:\n 1164       * @param string      $commandline\n 1165       * @param null|string $cwd\n 1166:      * @param null|array  $env\n 1167       * @param null|string $input\n 1168       * @param int         $timeout\n ....\n 1171       * @return Process\n 1172       */\n 1173:     abstract protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array());\n 1174  }\n 1175  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessBuilderTest.php:\n   26          unset($_ENV['MY_VAR_1']);\n   27  \n   28:         $env = $proc->getEnv();\n   29:         $this->assertArrayHasKey('MY_VAR_1', $env);\n   30:         $this->assertEquals('foo', $env['MY_VAR_1']);\n   31      }\n   32  \n   ..\n   34      {\n   35          $pb = new ProcessBuilder();\n   36:         $env = array(\n   37              'foo' => 'bar',\n   38              'foo2' => 'bar2',\n   ..\n   41              ->add('command')\n   42              ->setEnv('foo', 'bar2')\n   43:             ->addEnvironmentVariables($env)\n   44              ->inheritEnvironmentVariables(false)\n   45              ->getProcess()\n   46          ;\n   47  \n   48:         $this->assertSame($env, $proc->getEnv());\n   49      }\n   50  \n   ..\n   60          unset($_ENV['MY_VAR_1']);\n   61  \n   62:         $env = $proc->getEnv();\n   63:         $this->assertArrayHasKey('MY_VAR_1', $env);\n   64:         $this->assertEquals('bar', $env['MY_VAR_1']);\n   65      }\n   66  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildDisabledProcessTest.php:\n  254       * {@inheritdoc}\n  255       */\n  256:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  257      {\n  258:         $process = new ProcessInSigchildEnvironment($commandline, $cwd, $env, $input, $timeout, $options);\n  259          $process->setEnhanceSigchildCompatibility(false);\n  260  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildEnabledProcessTest.php:\n  139       * {@inheritdoc}\n  140       */\n  141:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  142      {\n  143:         $process = new ProcessInSigchildEnvironment($commandline, $cwd, $env, $input, $timeout, $options);\n  144          $process->setEnhanceSigchildCompatibility(true);\n  145  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SimpleProcessTest.php:\n  202       * {@inheritdoc}\n  203       */\n  204:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  205      {\n  206:         return new Process($commandline, $cwd, $env, $input, $timeout, $options);\n  207      }\n  208  \n\n/Users/james/Sites/wedding/api/vendor/vlucas/phpdotenv/src/Dotenv.php:\n   83       *\n   84       * @throws \\RuntimeException\n   85:      * @param  mixed             $environmentVariables the name of the environment variable or an array of names\n   86       * @param  string[]          $allowedValues\n   87       * @return true              (or throws exception on error)\n   88       */\n   89:     public static function required($environmentVariables, array $allowedValues = array())\n   90      {\n   91:         $environmentVariables = (array) $environmentVariables;\n   92          $missingEnvironmentVariables = array();\n   93  \n   94:         foreach ($environmentVariables as $environmentVariable) {\n   95:             $value = static::findEnvironmentVariable($environmentVariable);\n   96              if (is_null($value)) {\n   97:                 $missingEnvironmentVariables[] = $environmentVariable;\n   98              } elseif ($allowedValues) {\n   99                  if (!in_array($value, $allowedValues)) {\n  100                      // may differentiate in the future, but for now this does the job\n  101:                     $missingEnvironmentVariables[] = $environmentVariable;\n  102                  }\n  103              }\n\n98 matches across 23 files\n\n\nSearching 5504 files for \"$env \"\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/View/View.php:\n  119  	public function renderSections()\n  120  	{\n  121: 		$env = $this->factory;\n  122  \n  123  		return $this->render(function($view) use ($env)\n\n/Users/james/Sites/wedding/api/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php:\n  114  			$finder = $app['view.finder'];\n  115  \n  116: 			$env = new Factory($resolver, $finder, $app['events']);\n  117  \n  118  			// We will also set the container instance on this view environment since the\n\n/Users/james/Sites/wedding/api/vendor/maximebf/debugbar/src/DebugBar/Bridge/Twig/TwigCollector.php:\n   24   *\n   25   * <code>\n   26:  * $env = new TraceableTwigEnvironment(new Twig_Environment($loader));\n   27   * $debugbar->addCollector(new TwigCollector($env));\n   28   * </code>\n\n/Users/james/Sites/wedding/api/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/KernelTest.php:\n   26      public function testConstructor()\n   27      {\n   28:         $env = 'test_env';\n   29          $debug = true;\n   30          $kernel = new KernelForTest($env, $debug);\n   ..\n   39      public function testClone()\n   40      {\n   41:         $env = 'test_env';\n   42          $debug = true;\n   43          $kernel = new KernelForTest($env, $debug);\n   ..\n  380      public function testSerialize()\n  381      {\n  382:         $env = 'test_env';\n  383          $debug = true;\n  384          $kernel = new KernelForTest($env, $debug);\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/PhpProcess.php:\n   32       * @param string $script  The PHP script to run (as a string)\n   33       * @param string $cwd     The working directory\n   34:      * @param array  $env     The environment variables\n   35       * @param int    $timeout The timeout in seconds\n   36       * @param array  $options An array of options for proc_open\n   ..\n   38       * @api\n   39       */\n   40:     public function __construct($script, $cwd = null, array $env = array(), $timeout = 60, array $options = array())\n   41      {\n   42          $executableFinder = new PhpExecutableFinder();\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Process.php:\n  134       * @param string         $commandline The command line to run\n  135       * @param string|null    $cwd         The working directory or null to use the working dir of the current PHP process\n  136:      * @param array|null     $env         The environment variables or null to inherit\n  137       * @param string|null    $input       The input\n  138       * @param int|float|null $timeout     The timeout in seconds or null to disable\n  ...\n  143       * @api\n  144       */\n  145:     public function __construct($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  146      {\n  147          if (!function_exists('proc_open')) {\n  ...\n 1040       * the $_ENV array for instance.\n 1041       *\n 1042:      * @param array $env The new environment variables\n 1043       *\n 1044       * @return self The current Process instance\n ....\n 1047      {\n 1048          // Process can not handle env values that are arrays\n 1049:         $env = array_filter($env, function ($value) {\n 1050              return !is_array($value);\n 1051          });\n 1052  \n 1053          $this->env = array();\n 1054:         foreach ($env as $key => $value) {\n 1055              $this->env[(binary) $key] = (binary) $value;\n 1056          }\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/ProcessBuilder.php:\n   24      private $arguments;\n   25      private $cwd;\n   26:     private $env = array();\n   27      private $input;\n   28      private $timeout = 60;\n   ..\n  270          if ($this->inheritEnv) {\n  271              // include $_ENV for BC purposes\n  272:             $env = array_replace($_ENV, $_SERVER, $this->env);\n  273          } else {\n  274:             $env = $this->env;\n  275          }\n  276  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/AbstractProcessTest.php:\n 1171       * @return Process\n 1172       */\n 1173:     abstract protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array());\n 1174  }\n 1175  \n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/ProcessBuilderTest.php:\n   26          unset($_ENV['MY_VAR_1']);\n   27  \n   28:         $env = $proc->getEnv();\n   29          $this->assertArrayHasKey('MY_VAR_1', $env);\n   30          $this->assertEquals('foo', $env['MY_VAR_1']);\n   ..\n   34      {\n   35          $pb = new ProcessBuilder();\n   36:         $env = array(\n   37              'foo' => 'bar',\n   38              'foo2' => 'bar2',\n   ..\n   60          unset($_ENV['MY_VAR_1']);\n   61  \n   62:         $env = $proc->getEnv();\n   63          $this->assertArrayHasKey('MY_VAR_1', $env);\n   64          $this->assertEquals('bar', $env['MY_VAR_1']);\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildDisabledProcessTest.php:\n  254       * {@inheritdoc}\n  255       */\n  256:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  257      {\n  258          $process = new ProcessInSigchildEnvironment($commandline, $cwd, $env, $input, $timeout, $options);\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SigchildEnabledProcessTest.php:\n  139       * {@inheritdoc}\n  140       */\n  141:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  142      {\n  143          $process = new ProcessInSigchildEnvironment($commandline, $cwd, $env, $input, $timeout, $options);\n\n/Users/james/Sites/wedding/api/vendor/symfony/process/Symfony/Component/Process/Tests/SimpleProcessTest.php:\n  202       * {@inheritdoc}\n  203       */\n  204:     protected function getProcess($commandline, $cwd = null, array $env = null, $input = null, $timeout = 60, array $options = array())\n  205      {\n  206          return new Process($commandline, $cwd, $env, $input, $timeout, $options);\n\n23 matches across 12 files\n",
 			"settings":
 			{
-				"buffer_size": 7208,
-				"line_ending": "Unix"
+				"buffer_size": 25838,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
 			"file": "src/app/js/app.js",
 			"settings":
 			{
-				"buffer_size": 4085,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos/template.html",
-			"settings":
-			{
-				"buffer_size": 2085,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/components/widget-photos/def.coffee",
-			"settings":
-			{
-				"buffer_size": 866,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "api/app/Http/Controllers/PhotosController.php",
-			"settings":
-			{
-				"buffer_size": 5853,
+				"buffer_size": 4081,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +145,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4323,
+				"buffer_size": 4364,
 				"line_ending": "Unix"
 			}
 		},
@@ -176,18 +158,58 @@
 			}
 		},
 		{
-			"file": "api/app/Http/Controllers/RSVPController.php",
+			"file": "src/app/components/widget-seating-plan/def.coffee",
 			"settings":
 			{
-				"buffer_size": 1569,
+				"buffer_size": 5316,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "api/config/mail.php",
+			"file": "src/app/components/widget-seating-plan/template.html",
 			"settings":
 			{
-				"buffer_size": 4068,
+				"buffer_size": 3667,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/js/models/guest.coffee",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/js/models/seat.coffee",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/js/models/table.coffee",
+			"settings":
+			{
+				"buffer_size": 4296,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/js/require.config.js",
+			"settings":
+			{
+				"buffer_size": 1678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/libs/bower/jquery-ui/ui/sortable.js",
+			"settings":
+			{
+				"buffer_size": 43418,
 				"line_ending": "Unix"
 			}
 		}
@@ -195,7 +217,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 301.0,
+		"height": 400.0,
 		"selected_items":
 		[
 			[
@@ -231,7 +253,7 @@
 				"Pretty JSON: Reformat (Pretty Print) JSON"
 			]
 		],
-		"width": 457.0
+		"width": 475.0
 	},
 	"console":
 	{
@@ -248,11 +270,23 @@
 	},
 	"file_history":
 	[
+		"/Users/james/Sites/wedding/src/libs/bower/knockout-sortable/build/knockout-sortable.js",
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/libs/bower/knockout-sortable/build/knockout-sortable.js",
+		"/Users/james/Sites/wedding/src/app/js/models/plan.coffee",
+		"/Users/james/Sites/wedding/src/app/js/models/seat.js",
+		"/Users/james/Sites/wedding/src/app/components/widget-photos/template.html",
+		"/Users/james/Sites/wedding/src/app/components/widget-photos/def.coffee",
+		"/Users/james/Sites/wedding/src/app/js/models/floor.coffee",
+		"/Users/james/Sites/wedding/src/app/js/require.config.js",
+		"/Users/james/Sites/wedding/api/config/app.php",
+		"/Users/james/Sites/wedding/api/.env",
+		"/Users/james/Sites/wedding/api/config/mail.php",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php",
+		"/Users/james/Sites/wedding/api/app/Http/Controllers/PhotosController.php",
 		"/Users/james/Sites/wedding/src/app/third-party.js",
 		"/Users/james/Sites/wedding/src/libs/bower/bootstrap/less/variables.less",
 		"/Users/james/Sites/wedding/api/resources/assets/less/bootstrap/variables.less",
 		"/Users/james/Downloads/template.html",
-		"/Users/james/Sites/wedding/api/app/Http/Controllers/RSVPController.php",
 		"/Users/james/Sites/wedding/src/app/components/widget-map/def.coffee",
 		"/Users/james/Sites/wedding/src/app/components/widget-photos-admin/template.html",
 		"/Users/james/Sites/wedding/src/app/components/widget-photos-admin/def.coffee",
@@ -263,7 +297,6 @@
 		"/Users/james/Sites/wedding/gulpfile.js",
 		"/Users/james/Sites/wedding/node_modules/teamwork-coffeelint-rules/coffeelint.json",
 		"/Users/james/Sites/wedding/node_modules/coffeelint/coffeelint.json",
-		"/Users/james/Sites/wedding/api/config/app.php",
 		"/Users/james/Sites/wedding/api/app/Http/Controllers/LaravelFacebookStorageController.php",
 		"/Users/james/Sites/wedding/api/vendor/composer/autoload_classmap.php",
 		"/Users/james/Sites/wedding/api/app/Http/Controllers/WelcomeController.php",
@@ -347,7 +380,6 @@
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-docs-top-searches/def.coffee",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/chart-dashInboxes-ticketsByChannel/def.coffee",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/config/components.js",
-		"/Users/james/Sites/wedding/src/app/js/require.config.js",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/models/userModel.js",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/socket.coffee",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/coffeewatch.bat",
@@ -365,17 +397,7 @@
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/less/fonts.less",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/.vendor/src/code.google.com/p/go.tools/present/parse.go",
 		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/conf/routes",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/views/emails/billing/receipt.html",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-new-cannedresponse/template.html",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/modal-new-cannedresponse/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-cannedresponses/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings/template.html",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoices/template.html",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/section-settings-billing-invoices/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-billing/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id/def.coffee",
-		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/frontend/src/app/components/page-settings-tab-inboxes-id-permissions/def.coffee"
+		"/Users/james/gocode/src/github.com/teamwork/TeamworkDesk/app/views/emails/billing/receipt.html"
 	],
 	"find":
 	{
@@ -436,6 +458,79 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"log",
+			"createCanvasItem",
+			"@initialTables",
+			"availableGuests",
+			"@extraGuests",
+			"initialTables",
+			"extraGuests",
+			"maximumStudents",
+			"maximumGuests",
+			"Students",
+			"Student",
+			"initialTables",
+			"firstName",
+			"fullName",
+			"fullname",
+			"student",
+			"availableStudents",
+			"student",
+			"availableStudents",
+			"extraStudents",
+			"fullName",
+			"students",
+			"students.id",
+			"name",
+			"id",
+			"Student",
+			"Table1",
+			"seats",
+			"@stude",
+			"verifyAssignments",
+			"Students",
+			".table",
+			">\n",
+			"verifyAssignments",
+			"updateLastAction",
+			"root",
+			"plan",
+			"vm",
+			"SeatingChartModel",
+			"id",
+			"students.id",
+			"this.",
+			"@tables",
+			"Table",
+			"new Table",
+			"Table",
+			"==",
+			"function",
+			";",
+			"var ",
+			",",
+			"seatsArray",
+			"j",
+			"canvas",
+			"placeWidth",
+			"@@",
+			"spacesWidth",
+			"@@",
+			"tableHeight",
+			"tableWidth",
+			"seatSpaceMultiplier",
+			"chairSize",
+			"verticalSeatCount",
+			"horizontalSeatCount",
+			"photos",
+			"var ",
+			"//",
+			"log",
+			"$env ",
+			"$env",
+			"detectEnvironment",
+			"APP_ENV",
+			"APP_DEBUG",
 			"array('*",
 			"array('*')",
 			"allowedOrigins",
@@ -490,80 +585,7 @@
 			"require a",
 			"james",
 			"error_reporting",
-			"timezone",
-			"teamwork.com-website-2015",
-			"mailgun",
-			"/activate",
-			"@languages",
-			"langua",
-			"sendinvite",
-			"send invite",
-			"activat",
-			"invit",
-			"IsDripActivated",
-			"dkim",
-			"has not been enabled on your account",
-			"ErrNotSetupInDesk",
-			"The installation exists in PM, but has not yet been created in desk",
-			"branding.json",
-			"timeformatid",
-			".DeskInstallation",
-			"UserSession",
-			"UserSession.",
-			"UserSession",
-			"xxx",
-			"Session.user",
-			"Session",
-			"zero",
-			"SessionVersion",
-			"s.DeskInstallation.AppOwnerUserId",
-			"is zero",
-			"if s.DeskInstallation.AppOwnerUserId == 0 {",
-			"AppOwnerUserId",
-			"AppendTWProjectsUserData",
-			"user.Email",
-			"session.Email",
-			"session.email",
-			"session.useremail",
-			"session.email",
-			"// post",
-			"post",
-			"getappowner",
-			"AppOwnerUserId",
-			"truth",
-			"isappowner",
-			"dripAPIKey",
-			"AddedFirstInbox",
-			"Onboarding",
-			"AddInbox(",
-			"AddInbox",
-			"session.FirstName",
-			"session",
-			"session.useremail",
-			"session.email",
-			".email",
-			"firstname",
-			"session.firstname",
-			"user.firstn",
-			"session.user",
-			"session.",
-			"struct {",
-			"[]struct",
-			"]struct",
-			"[]",
-			"RegisterEventArgs",
-			"SiteOwnerEmail",
-			"adding template:",
-			"SetupInstallationOnFirstLogin",
-			"UserDb",
-			"dbDeskUser",
-			"SetupInstallationOnFirstLogin",
-			"createinst",
-			"SetupInstallationOnFirstLogin",
-			"session.DeskInstallation.AppOwnerUserId is zero",
-			"InitDrip",
-			"SetupInstallationOnFirstLogin",
-			"getdrip"
+			"timezone"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -586,32 +608,596 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "api/config/app.php",
 					"settings":
 					{
-						"buffer_size": 7208,
+						"buffer_size": 25838,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										103,
+										112
+									],
+									[
+										248,
+										257
+									],
+									[
+										394,
+										403
+									],
+									[
+										540,
+										547
+									],
+									[
+										677,
+										684
+									],
+									[
+										858,
+										865
+									],
+									[
+										1192,
+										1199
+									],
+									[
+										1428,
+										1435
+									],
+									[
+										2010,
+										2027
+									],
+									[
+										2101,
+										2118
+									],
+									[
+										2643,
+										2660
+									],
+									[
+										2763,
+										2780
+									],
+									[
+										3071,
+										3088
+									],
+									[
+										3151,
+										3168
+									],
+									[
+										3432,
+										3449
+									],
+									[
+										3983,
+										4000
+									],
+									[
+										4406,
+										4423
+									],
+									[
+										4698,
+										4702
+									],
+									[
+										4909,
+										4913
+									],
+									[
+										5009,
+										5013
+									],
+									[
+										5058,
+										5062
+									],
+									[
+										5327,
+										5331
+									],
+									[
+										5469,
+										5473
+									],
+									[
+										5678,
+										5682
+									],
+									[
+										5827,
+										5831
+									],
+									[
+										5918,
+										5922
+									],
+									[
+										5997,
+										6001
+									],
+									[
+										6163,
+										6167
+									],
+									[
+										6251,
+										6255
+									],
+									[
+										6316,
+										6320
+									],
+									[
+										6333,
+										6337
+									],
+									[
+										6550,
+										6554
+									],
+									[
+										6742,
+										6746
+									],
+									[
+										6860,
+										6864
+									],
+									[
+										6948,
+										6952
+									],
+									[
+										7002,
+										7006
+									],
+									[
+										7181,
+										7185
+									],
+									[
+										7263,
+										7267
+									],
+									[
+										7297,
+										7301
+									],
+									[
+										7502,
+										7506
+									],
+									[
+										7832,
+										7836
+									],
+									[
+										7876,
+										7880
+									],
+									[
+										7927,
+										7931
+									],
+									[
+										8134,
+										8138
+									],
+									[
+										8263,
+										8267
+									],
+									[
+										8335,
+										8339
+									],
+									[
+										8536,
+										8540
+									],
+									[
+										8656,
+										8660
+									],
+									[
+										8869,
+										8873
+									],
+									[
+										9129,
+										9133
+									],
+									[
+										9191,
+										9195
+									],
+									[
+										9382,
+										9386
+									],
+									[
+										9389,
+										9393
+									],
+									[
+										9613,
+										9617
+									],
+									[
+										9628,
+										9632
+									],
+									[
+										9679,
+										9683
+									],
+									[
+										9694,
+										9698
+									],
+									[
+										9974,
+										9978
+									],
+									[
+										10130,
+										10134
+									],
+									[
+										10322,
+										10326
+									],
+									[
+										10393,
+										10397
+									],
+									[
+										10590,
+										10594
+									],
+									[
+										10676,
+										10680
+									],
+									[
+										10904,
+										10908
+									],
+									[
+										10996,
+										11000
+									],
+									[
+										11054,
+										11058
+									],
+									[
+										11281,
+										11285
+									],
+									[
+										11373,
+										11377
+									],
+									[
+										11478,
+										11482
+									],
+									[
+										11706,
+										11710
+									],
+									[
+										11798,
+										11802
+									],
+									[
+										11864,
+										11868
+									],
+									[
+										12219,
+										12223
+									],
+									[
+										12492,
+										12496
+									],
+									[
+										12702,
+										12706
+									],
+									[
+										12930,
+										12934
+									],
+									[
+										13238,
+										13242
+									],
+									[
+										13558,
+										13562
+									],
+									[
+										13785,
+										13789
+									],
+									[
+										13826,
+										13830
+									],
+									[
+										13949,
+										13953
+									],
+									[
+										14109,
+										14113
+									],
+									[
+										14211,
+										14215
+									],
+									[
+										14231,
+										14235
+									],
+									[
+										14390,
+										14394
+									],
+									[
+										14673,
+										14677
+									],
+									[
+										14867,
+										14871
+									],
+									[
+										14961,
+										14965
+									],
+									[
+										15064,
+										15068
+									],
+									[
+										15392,
+										15396
+									],
+									[
+										15613,
+										15617
+									],
+									[
+										15875,
+										15879
+									],
+									[
+										15951,
+										15955
+									],
+									[
+										16000,
+										16004
+									],
+									[
+										16117,
+										16121
+									],
+									[
+										16333,
+										16337
+									],
+									[
+										16487,
+										16491
+									],
+									[
+										16602,
+										16606
+									],
+									[
+										16678,
+										16682
+									],
+									[
+										16727,
+										16731
+									],
+									[
+										17004,
+										17008
+									],
+									[
+										17165,
+										17169
+									],
+									[
+										17509,
+										17513
+									],
+									[
+										17670,
+										17674
+									],
+									[
+										18004,
+										18008
+									],
+									[
+										18140,
+										18144
+									],
+									[
+										18362,
+										18366
+									],
+									[
+										18626,
+										18630
+									],
+									[
+										18709,
+										18713
+									],
+									[
+										18741,
+										18745
+									],
+									[
+										18851,
+										18855
+									],
+									[
+										18876,
+										18880
+									],
+									[
+										18960,
+										18964
+									],
+									[
+										19081,
+										19085
+									],
+									[
+										19367,
+										19371
+									],
+									[
+										19645,
+										19650
+									],
+									[
+										19894,
+										19899
+									],
+									[
+										20184,
+										20189
+									],
+									[
+										20513,
+										20518
+									],
+									[
+										20693,
+										20698
+									],
+									[
+										20877,
+										20882
+									],
+									[
+										21241,
+										21246
+									],
+									[
+										21514,
+										21519
+									],
+									[
+										21978,
+										21983
+									],
+									[
+										22298,
+										22303
+									],
+									[
+										22523,
+										22528
+									],
+									[
+										22730,
+										22735
+									],
+									[
+										22909,
+										22914
+									],
+									[
+										23192,
+										23197
+									],
+									[
+										23386,
+										23391
+									],
+									[
+										23480,
+										23485
+									],
+									[
+										23764,
+										23769
+									],
+									[
+										24026,
+										24031
+									],
+									[
+										24247,
+										24252
+									],
+									[
+										24403,
+										24408
+									],
+									[
+										24784,
+										24789
+									],
+									[
+										25216,
+										25221
+									],
+									[
+										25639,
+										25644
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								455,
-								455
+								19465,
+								19465
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"detect_indentation": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7087.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -621,15 +1207,15 @@
 					"file": "src/app/js/app.js",
 					"settings":
 					{
-						"buffer_size": 4085,
+						"buffer_size": 4081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								1704,
+								1704
 							]
 						],
 						"settings":
@@ -639,30 +1225,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 194.0,
+						"translation.y": 346.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/app/components/widget-photos/template.html",
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 2085,
+						"buffer_size": 4364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								555,
-								555
+								3483,
+								3483
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1074.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/less/styles.less",
+					"settings":
+					{
+						"buffer_size": 2729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -672,23 +1285,79 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/app/components/widget-photos/def.coffee",
+					"buffer": 4,
+					"file": "src/app/components/widget-seating-plan/def.coffee",
 					"settings":
 					{
-						"buffer_size": 866,
+						"buffer_size": 5316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								723,
-								723
+								3728,
+								3728
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1166.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/app/components/widget-seating-plan/template.html",
+					"settings":
+					{
+						"buffer_size": 3667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3651,
+								3651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1944.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/app/js/models/guest.coffee",
+					"settings":
+					{
+						"buffer_size": 852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
 							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -700,106 +1369,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "api/app/Http/Controllers/PhotosController.php",
-					"settings":
-					{
-						"buffer_size": 5853,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4217,
-								4217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2241.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 4323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3390,
-								3390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 513.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/less/styles.less",
-					"settings":
-					{
-						"buffer_size": 2729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1000,
-								1000
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 604.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 7,
-					"file": "api/app/Http/Controllers/RSVPController.php",
+					"file": "src/app/js/models/seat.coffee",
 					"settings":
 					{
-						"buffer_size": 1569,
+						"buffer_size": 852,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								797,
-								797
+								413,
+								413
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"_anf_new": "",
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -809,27 +1399,84 @@
 				},
 				{
 					"buffer": 8,
-					"file": "api/config/mail.php",
+					"file": "src/app/js/models/table.coffee",
 					"settings":
 					{
-						"buffer_size": 4068,
+						"buffer_size": 4296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4062,
-								4062
+								198,
+								198
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"_anf_new": "",
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 828.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/app/js/require.config.js",
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1644,
+								1644
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/libs/bower/jquery-ui/ui/sortable.js",
+					"settings":
+					{
+						"buffer_size": 43418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4660,
+								4660
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1119.0,
+						"translation.y": 2621.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -886,6 +1533,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"sort",
+				"src/libs/bower/jquery-ui/ui/sortable.js"
+			],
+			[
+				"requi",
+				"src/app/js/require.config.js"
+			],
+			[
+				"require",
+				"src/app/js/require.config.js"
+			],
+			[
+				"seatingplantem",
+				"src/app/components/widget-seating-plan/template.html"
+			],
+			[
+				"seatingplan",
+				"src/app/components/widget-seating-plan/def.coffee"
+			],
+			[
+				".env",
+				"api/.env"
+			],
 			[
 				"apimail",
 				"api/config/mail.php"
@@ -1091,10 +1762,6 @@
 				"frontend/src/app/models/teamworkDesk.coffee"
 			],
 			[
-				"require",
-				"frontend/src/app/require.config.js"
-			],
-			[
 				"paymentdeta",
 				"frontend/src/app/components/widget-payment-details/template.html"
 			],
@@ -1275,10 +1942,6 @@
 				".gitignore"
 			],
 			[
-				"requi",
-				"frontend/test/require.config.js"
-			],
-			[
 				"ticketco",
 				"app/controllers/ticketController.go"
 			],
@@ -1381,22 +2044,6 @@
 			[
 				"stripeca",
 				"pages/actions/stripeCallback/index.cfm"
-			],
-			[
-				"makep",
-				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_makepayment.cfm"
-			],
-			[
-				"creditcard",
-				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_paymentForm_creditCardStripe.cfm"
-			],
-			[
-				"billingmakep",
-				"pages/includes/page_externalsitepage/billing.teamworkpm.net/inc_makepayment.cfm"
-			],
-			[
-				"incmake",
-				"pages/includes/page_subscription/inc_makepayment.cfm"
 			]
 		],
 		"width": 0.0
@@ -1408,7 +2055,7 @@
 		[
 			[
 				"",
-				"/Users/james/Documents/seatplan/seatplan.sublime-project"
+				"/Users/james/Sites/teamworkpm/teamworkpm.sublime-project"
 			]
 		],
 		"width": 380.0

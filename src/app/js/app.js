@@ -4,7 +4,8 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         'widget-map',
         'widget-photos',
         'widget-photos-admin',
-        'widget-rsvp'
+        'widget-rsvp',
+        'widget-seating-plan'
     ];
 
 
@@ -51,7 +52,7 @@ define(['knockout', 'moment', 'bindings-ladda'], function (ko, moment) {
         // isFacebookTokenOkay = true;
 
         if ( !this.isFacebookTokenOkay ) {
-            this.initializeFacebook();
+            //this.initializeFacebook();
         }
 
     }

@@ -1,0 +1,180 @@
+<section id="rsvp" class="main-section row">
+
+	<style>
+		body {
+		    font-family: arial;
+		}
+
+		.table1 {
+		    float: left;
+		    text-align: center;
+		    margin-right: 5px;
+		}
+
+		.table1 span {
+		    font-size: .75em;
+		}
+
+		.seats {
+		    border: solid 3px #666;
+		    width: 75px;
+		    height: 100px;
+		    background-color: #666;
+		    margin: 5px;
+		    padding: 2px;
+		    border-radius: 5px;
+		    box-shadow: 2px 2px 2px #999;
+		}
+
+		.ko_container {
+		    border: solid 3px green;
+		}
+
+		.student {
+		    background-color: #444;
+		    color: #fff;
+		    border-radius: 3px;
+		    margin: 2px;
+		    padding: 1px;
+		    text-align: center;
+		    width: 62px;
+		    cursor: move;
+		}
+
+		.new {
+		    border: solid 1px #444;
+		    background-color: #ccc;
+		    height: 32px;
+		    width: 500px;
+		    padding: 2px;
+		    border-radius: 5px;
+		}
+
+		.new div {
+		    float: left;
+		}
+
+		.note {
+		    font-style: italic;
+		    font-size: .75em;
+		    color: #888;
+		    margin-bottom: 10px;
+		}
+
+		.count {
+		    color: #666;
+		}
+
+		.ready {
+		    color: green;
+		}
+
+		#extra {
+		    clear: both;
+		    padding-top: 20px;
+		}
+
+		#master {
+		    margin-top: 40px;
+		}
+
+
+		#master td, th {
+		    font-size: .75em;
+		    text-align: center;
+		    padding: 1px;
+		    border: solid 1px black;
+		}
+
+		#master th {
+		    color: #666;
+		}
+
+		#message, #error {
+		    font-size: .75em;
+		    margin-top: 10px;
+		    background-color: orange;
+		    color: #444;
+		    padding: 2px;
+		    width: 500px;
+		    text-align: center;
+		    border-radius: 5px;
+		    box-shadow: 2px 2px 2px #999;
+		    position: absolute;
+		}
+
+		#error {
+		    background-color: #ff3333;
+		    color: #ddd;
+		}
+	</style>
+
+	<h1 class="ribbon text-center">Seating Plan</h1>
+
+
+	<div id="guestList">
+		<h2>Guests</h2>
+
+
+
+
+
+		<div>Seating Assignments</div>
+		<div class="note">Rules: no more than 4 guests per table. Must have at least one guest of each gender at a full table.</div>
+		<div id="main" data-bind="foreach: tables">
+			<!-- <pre data-bind="text: $parent"></pre> -->
+		    <div class="table1">
+		        <span data-bind="text: guests.id"></span>
+		        <div class="seats" data-bind="sortable: { data: guests, allowDrop: $parent.isTableFull.bind($parent) }">
+		            <div class="student" data-bind="text: firstName"></div>
+		        </div>
+		        <div class="count" data-bind="text: guests().length + '/' + $parent.maximumGuests, css: { ready: guests().length < $parent.maximumGuests }"></div>
+		    </div>
+		</div>
+
+		<div id="extra">
+		    <div>Available Guests</div>
+		    <div class="new" data-bind="sortable: availableGuests">
+		        <div class="student" data-bind="text: firstName"></div>
+		    </div>
+		</div>
+
+		<div id="message" data-bind="flash: lastAction"></div>
+		<div id="error" data-bind="flash: lastError"></div>
+
+		<div id="master">
+		    <div>Master List</div>
+		    <table>
+		        <tr>
+		            <th></th>
+		            <th>Seat One</th>
+		            <th>Seat Two</th>
+		            <th>Seat Three</th>
+		            <th>Seat Four</th>
+		        </tr>
+		        <tbody data-bind="foreach: tables">
+		            <tr>
+		                <th data-bind="text: guests.id"></th>
+		                <!-- ko foreach: guests -->
+		                <td data-bind="text: firstName"></td>
+		                <!-- /ko -->
+		            </tr>
+		        </tbody>
+		        <tr>
+		            <th>Available</th>
+		            <!-- ko foreach: availableGuests -->
+		            <td data-bind="text: firstName"></td>
+		            <!-- /ko -->
+		        </tr>
+		    </table>
+		</div>
+
+
+
+
+
+	</div>
+
+	<canvas width="800" height="400" id="test"></canvas>
+
+</section>
